@@ -1,5 +1,5 @@
 import pytest
-from solutions.sol1512 import Solution
+from solutions.sol_1512 import Solution
 
 cases = [
     {
