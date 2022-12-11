@@ -18,7 +18,7 @@ cases = [
 ]
 
 
-@pytest.mark.sol1512
+@pytest.mark.sol1339
 def test_run():
     for case in cases:
         assert Solution.max_product(
