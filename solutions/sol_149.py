@@ -1,4 +1,5 @@
 import math
+from collections import defaultdict
 from typing import List
 
 
@@ -38,4 +39,20 @@ class Solution:
                     if math.isclose(px * slope + c, py):
                         count += 1
                 answer = max(answer, count)
+        return answer
+
+    @staticmethod
+    def max_points_2(points: List[List[int]]) -> int:
+        n = len(points)
+        answer = 1
+        for i in range(n - 1):
+            x1, y1 = points[i]
+            count = defaultdict(int)
+            for j in range(i + 1, n):
+                x2, y2 = points[j]
+                if x1 == x2:
+                    count['inf'] += 1
+                    continue
+                count[(y1 - y2) / (x1 - x2)] += 1
+            answer = max(answer, max(count.values()) + 1)
         return answer

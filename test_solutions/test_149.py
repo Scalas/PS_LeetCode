@@ -23,3 +23,6 @@ def test_run():
         assert Solution.max_points(
             points=case['input']['points'],
         ) == case['output']
+        assert Solution.max_points_2(
+            points=case['input']['points'],
+        ) == case['output']
