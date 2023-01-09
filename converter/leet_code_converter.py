@@ -9,17 +9,29 @@ def list_to_tree(tree: List[int]) -> Optional[TreeNode]:
 
     n = len(tree)
     root = TreeNode()
+    root.val = tree[0]
+    q = [root]
+    idx = 1
 
-    def dfs(cur: int, cur_node: TreeNode):
-        cur_node.val = tree[cur]
-        left = cur * 2 + 1
-        if left < n and tree[left]:
-            cur_node.left = TreeNode()
-            dfs(left, cur_node.left)
-        right = cur * 2 + 2
-        if right < n and tree[right]:
-            cur_node.right = TreeNode()
-            dfs(right, cur_node.right)
+    q = [root]
+    while q and idx < n:
+        nq = []
+        for cur in q:
+            left = tree[idx]
+            if left is not None:
+                cur.left = TreeNode()
+                cur.left.val = left
+                nq.append(cur.left)
+            idx += 1
 
-    dfs(0, root)
+            if idx == n:
+                break
+
+            right = tree[idx]
+            if right is not None:
+                cur.right = TreeNode()
+                cur.right.val = right
+                nq.append(cur.right)
+            idx += 1
+        q = nq
     return root
