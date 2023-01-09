@@ -7,7 +7,7 @@ on:
 
 jobs:
   run-unit-test:
-    runs-on: [ self-hosted, Linux, X64 ]
+    runs-on: [ ubuntu-latest ]
     steps:
       - name: checkout code
         uses: actions/checkout@v3
