@@ -10,13 +10,15 @@ def list_to_tree(tree: List[int]) -> Optional[TreeNode]:
     n = len(tree)
     root = TreeNode()
     root.val = tree[0]
-    q = [root]
     idx = 1
 
     q = [root]
     while q and idx < n:
         nq = []
         for cur in q:
+            if idx == n:
+                break
+
             left = tree[idx]
             if left is not None:
                 cur.left = TreeNode()
