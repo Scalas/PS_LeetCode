@@ -1,6 +1,6 @@
 import pytest
 from solutions.sol_1339 import Solution
-from converter.leet_code_converter import list_to_tree
+from converter.leet_code_utils import list_to_tree
 
 cases = [
     {

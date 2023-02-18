@@ -37,3 +37,30 @@ def list_to_tree(tree: List[int]) -> Optional[TreeNode]:
             idx += 1
         q = nq
     return root
+
+
+def compare_tree(t1: Optional[TreeNode], t2: Optional[TreeNode]):
+    def compare(node1: Optional[TreeNode], node2: Optional[TreeNode]) -> bool:
+        try:
+            if node1.val != node2.val:
+                return False
+            if node1.left:
+                if not compare(node1.left, node2.left):
+                    return False
+            if node1.right:
+                if not compare(node1.right, node2.right):
+                    return False
+            return True
+        except:
+            return False
+
+    try:
+        if t1:
+            if compare(t1, t2):
+                return True
+        else:
+            if not t2:
+                return True
+        return False
+    except:
+        return False
