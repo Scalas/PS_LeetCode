@@ -11,7 +11,9 @@ on:
     branches:
       - main
       -
-concurrency: test
+concurrency:
+  group: test
+  cancel-in-progress: true
 
 jobs:
   run-pytest:
