@@ -10,9 +10,12 @@ on:
       - synchronize
     branches:
       - main
+      -
+concurrency: test
 
 jobs:
   run-pytest:
+    environment: test
     runs-on: [ ubuntu-latest ]
     steps:
       - name: checkout code
