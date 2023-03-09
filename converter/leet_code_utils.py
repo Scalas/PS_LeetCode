@@ -1,5 +1,5 @@
 from typing import List, Optional
-from leet_code_types.leet_code_types import TreeNode, QuadTreeNode
+from leet_code_types.leet_code_types import TreeNode, QuadTreeNode, ListNode
 
 
 def list_to_tree(tree: List[int]) -> Optional[TreeNode]:
@@ -148,3 +148,33 @@ def compare_quad_tree(t1: Optional[QuadTreeNode], t2: Optional[QuadTreeNode]):
         return False
     except:
         return False
+
+
+def list_to_linked_list(python_list: List[int]) -> Optional[ListNode]:
+    if not python_list:
+        return None
+
+    head = ListNode(python_list[0])
+    pos = head
+    for num in python_list[1:]:
+        pos.next = ListNode(num)
+        pos = pos.next
+
+    return head
+
+
+def list_to_cyclic_linked_list(python_list: List[int], cycle_start) -> List[Optional[ListNode]]:
+    if not python_list:
+        return [None, None]
+
+    head = ListNode(python_list[0])
+    pos = head
+    cycle_start_node = None
+    for i in range(1, len(python_list)):
+        num = python_list[i]
+        pos.next = ListNode(num)
+        pos = pos.next
+        if i == cycle_start:
+            cycle_start_node = pos
+    pos.next = cycle_start_node
+    return [head, cycle_start_node]

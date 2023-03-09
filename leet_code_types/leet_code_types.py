@@ -13,3 +13,9 @@ class QuadTreeNode:
         self.top_right = top_right
         self.bottom_left = bottom_left
         self.bottom_right = bottom_right
+
+
+class ListNode:
+    def __init__(self, x):
+        self.val = x
+        self.next = None
