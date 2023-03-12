@@ -178,3 +178,14 @@ def list_to_cyclic_linked_list(python_list: List[int], cycle_start) -> List[Opti
             cycle_start_node = pos
     pos.next = cycle_start_node
     return [head, cycle_start_node]
+
+
+def compare_linked_list(list_1: Optional[ListNode], list_2: Optional[ListNode]) -> bool:
+    while list_1 and list_2:
+        if list_1.val != list_2.val:
+            return False
+        list_1 = list_1.next
+        list_2 = list_2.next
+    if list_1 or list_2:
+        return False
+    return True
