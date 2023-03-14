@@ -17,7 +17,7 @@ cases = [
 ]
 
 
-@pytest.mark.sol104
+@pytest.mark.sol121
 def test_run():
     for case in cases:
         assert Solution.max_profit(
