@@ -4,13 +4,13 @@ from solutions.sol_2306 import Solution
 cases = [
     {
         'input': {
-            'ideas': ["coffee","donuts","time","toffee"],
+            'ideas': ["coffee", "donuts", "time", "toffee"],
         },
         'output': 6
     },
     {
         'input': {
-            'ideas': ["lack","back"],
+            'ideas': ["lack", "back"],
         },
         'output': 0
     },
