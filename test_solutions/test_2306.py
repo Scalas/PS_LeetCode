@@ -6,13 +6,13 @@ cases = [
         'input': {
             'ideas': ["coffee", "donuts", "time", "toffee"],
         },
-        'output': 6
+        'output': 6,
     },
     {
         'input': {
             'ideas': ["lack", "back"],
         },
-        'output': 0
+        'output': 0,
     },
 ]
 
