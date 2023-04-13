@@ -4,21 +4,21 @@ from solutions.sol_944 import Solution
 cases = [
     {
         'input': {
-            'strs': ["cba", "daf", "ghi"]
+            'strs': ["cba", "daf", "ghi"],
         },
-        'output': 1
+        'output': 1,
     },
     {
         'input': {
-            'strs': ["a", "b"]
+            'strs': ["a", "b"],
         },
-        'output': 0
+        'output': 0,
     },
     {
         'input': {
-            'strs': ["zyx", "wvu", "tsr"]
+            'strs': ["zyx", "wvu", "tsr"],
         },
-        'output': 3
+        'output': 3,
     },
 ]
 
