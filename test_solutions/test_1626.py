@@ -5,23 +5,23 @@ cases = [
     {
         'input': {
             'scores': [1, 3, 5, 10, 15],
-            'ages': [1, 2, 3, 4, 5]
+            'ages': [1, 2, 3, 4, 5],
         },
-        'output': 34
+        'output': 34,
     },
     {
         'input': {
             'scores': [4, 5, 6, 5],
-            'ages': [2, 1, 2, 1]
+            'ages': [2, 1, 2, 1],
         },
-        'output': 16
+        'output': 16,
     },
     {
         'input': {
             'scores': [1, 2, 3, 5],
-            'ages': [8, 9, 10, 1]
+            'ages': [8, 9, 10, 1],
         },
-        'output': 6
+        'output': 6,
     },
 ]
 
