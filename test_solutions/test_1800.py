@@ -1,31 +1,31 @@
 import pytest
-from solutions.sol_1800 import Solution
+from solutions.sol_1822 import Solution
 
 cases = [
     {
         'input': {
-            'nums': [10, 20, 30, 5, 10, 50]
+            'nums': [-1, -2, -3, -4, 3, 2, 1],
         },
-        'output': 65
+        'output': 1,
     },
     {
         'input': {
-            'nums': [10, 20, 30, 40, 50]
+            'nums': [1, 5, 0, 2, -3],
         },
-        'output': 150
+        'output': 0,
     },
     {
         'input': {
-            'nums': [12, 17, 15, 13, 10, 11, 12]
+            'nums': [-1, 1, -1, 1, -1],
         },
-        'output': 33
+        'output': -1,
     },
 ]
 
 
-@pytest.mark.sol1800
+@pytest.mark.sol1822
 def test_run():
     for case in cases:
-        assert Solution.max_ascending_sum(
+        assert Solution.array_sign(
             nums=case['input']['nums']
         ) == case['output']
