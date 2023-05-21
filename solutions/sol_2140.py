@@ -1,3 +1,6 @@
+from typing import List
+
+
 class Solution:
     @staticmethod
     def most_points(questions: List[List[int]]) -> int:
