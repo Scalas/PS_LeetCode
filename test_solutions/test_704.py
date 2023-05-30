@@ -19,7 +19,7 @@ cases = [
 ]
 
 
-@pytest.mark.sol_652
+@pytest.mark.sol_704
 def test_run():
     for case in cases:
         assert Solution.search(
