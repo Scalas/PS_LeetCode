@@ -6,19 +6,19 @@ cases = [
         'input': {
             'nums': [1, 3, 0, 0, 2, 0, 0, 4],
         },
-        'output': 6
+        'output': 6,
     },
     {
         'input': {
             'nums': [0, 0, 0, 2, 0, 0],
         },
-        'output': 9
+        'output': 9,
     },
     {
         'input': {
             'nums': [2, 10, 2019],
         },
-        'output': 0
+        'output': 0,
     },
 ]
 
