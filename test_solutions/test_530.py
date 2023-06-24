@@ -28,6 +28,6 @@ cases = [
 @pytest.mark.sol_530
 def test_run():
     for case in cases:
-        assert Solution.getMinimumDifference(
+        assert Solution.get_minimum_difference(
             root=list_to_tree(case['input']['root'])
         ) == case['output']
