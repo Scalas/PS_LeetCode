@@ -4,15 +4,15 @@ from solutions.sol_2448 import Solution
 cases = [
     {
         'input': {
-            'nums': [1,3,5,2],
-            'cost': [2,3,1,14],
+            'nums': [1, 3, 5, 2],
+            'cost': [2, 3, 1, 14],
         },
         'output': 8,
     },
     {
         'input': {
-            'nums': [2,2,2,2,2],
-            'cost': [4,2,8,1,3],
+            'nums': [2, 2, 2, 2, 2],
+            'cost': [4, 2, 8, 1, 3],
         },
         'output': 0,
     },
