@@ -16,7 +16,7 @@ cases = [
         },
         'output': False
     },
-    {
+    {                                                                                                                                                                                                                                                                           
         'input': {
             's': 'aa',
             'goal': 'aa',
