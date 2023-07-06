@@ -4,15 +4,15 @@ from solutions.sol_198 import Solution
 cases = [
     {
         'input': {
-            'nums': [1, 2, 3, 1]
+            'nums': [1, 2, 3, 1],
         },
-        'output': 4
+        'output': 4,
     },
     {
         'input': {
-            'nums': [2, 7, 9, 3, 1]
+            'nums': [2, 7, 9, 3, 1],
         },
-        'output': 12
+        'output': 12,
     },
 ]
 
@@ -21,5 +21,5 @@ cases = [
 def test_run():
     for case in cases:
         assert Solution.rob(
-            nums=case['input']['nums']
+            nums=case['input']['nums'],
         ) == case['output']

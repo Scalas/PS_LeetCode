@@ -7,7 +7,7 @@ cases = [
             'commands': ["Trie", "insert", "search", "search", "startsWith", "insert", "search"],
             'args': [[], ["apple"], ["apple"], ["app"], ["app"], ["app"], ["app"]]
         },
-        'output': [None, None, True, False, True, None, True]
+        'output': [None, None, True, False, True, None, True],
     },
 ]
 
