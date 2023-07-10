@@ -5,13 +5,13 @@ from converter.leet_code_utils import list_to_tree
 cases = [
     {
         'input': {
-            'root': [3,9,20,None,None,15,7],
+            'root': [3, 9, 20, None, None, 15, 7],
         },
         'output': 2,
     },
     {
         'input': {
-            'root': [2,None,3,None,4,None,5,None,6],
+            'root': [2, None, 3, None, 4, None, 5, None, 6],
         },
         'output': 5,
     },
