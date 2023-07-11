@@ -3,7 +3,6 @@ from leet_code_types.leet_code_types import TreeNode, QuadTreeNode, ListNode
 
 
 def list_to_tree(tree: List[int]) -> Optional[TreeNode]:
-
     if not tree:
         return
 
@@ -189,3 +188,17 @@ def compare_linked_list(list_1: Optional[ListNode], list_2: Optional[ListNode]) 
     if list_1 or list_2:
         return False
     return True
+
+
+def find_from_tree(root: Optional[TreeNode], target: int) -> Optional[TreeNode]:
+    q = [root]
+    while q:
+        nq = []
+        for cur in q:
+            if cur.val == target:
+                return cur
+            if cur.left:
+                nq.append(cur.left)
+            if cur.right:
+                nq.append(cur.right)
+        q = nq
