@@ -38,6 +38,27 @@ def list_to_tree(tree: List[int]) -> Optional[TreeNode]:
     return root
 
 
+def tree_to_list(root: Optional[TreeNode]) -> List[int]:
+    if not root:
+        return []
+
+    res = []
+    q = [root]
+    while q:
+        nq = []
+        for cur in q:
+            if not cur:
+                res.append(None)
+            else:
+                res.append(0)
+                nq.append(cur.left)
+                nq.append(cur.right)
+        q = nq
+    while res and res[-1] is None:
+        res.pop()
+    return res
+
+
 def compare_tree(t1: Optional[TreeNode], t2: Optional[TreeNode]):
     def compare(node1: Optional[TreeNode], node2: Optional[TreeNode]) -> bool:
         try:
