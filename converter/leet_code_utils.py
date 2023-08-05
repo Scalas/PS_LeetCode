@@ -50,7 +50,7 @@ def tree_to_list(root: Optional[TreeNode]) -> List[int]:
             if not cur:
                 res.append(None)
             else:
-                res.append(0)
+                res.append(cur.val)
                 nq.append(cur.left)
                 nq.append(cur.right)
         q = nq
