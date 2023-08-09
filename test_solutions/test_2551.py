@@ -1,35 +1,28 @@
 import pytest
-from solutions.sol_1870 import Solution
+from solutions.sol_2551 import Solution
 
 cases = [
     {
         'input': {
-            'dist': [1, 3, 2],
-            'hour': 6,
+            'weights': [1, 3, 5, 1],
+            'k': 2,
         },
-        'output': 1,
+        'output': 4,
     },
     {
         'input': {
-            'dist': [1, 3, 2],
-            'hour': 2.7,
+            'weights': [1, 3],
+            'k': 2,
         },
-        'output': 3,
-    },
-    {
-        'input': {
-            'dist': [1, 3, 2],
-            'hour': 1.9,
-        },
-        'output': -1,
+        'output': 0,
     },
 ]
 
 
-@pytest.mark.sol_1870
+@pytest.mark.sol_2551
 def test_run():
     for case in cases:
-        assert Solution.min_speed_on_time(
-            dist=case['input']['dist'],
-            hour=case['input']['hour']
+        assert Solution.put_marbles(
+            weights=case['input']['weights'],
+            k=case['input']['k']
         ) == case['output']
