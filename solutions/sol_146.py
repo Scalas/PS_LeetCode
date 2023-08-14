@@ -1,5 +1,4 @@
 class LRUCache:
-
     def __init__(self, capacity: int):
         self.cache = dict()
         self.capacity = capacity

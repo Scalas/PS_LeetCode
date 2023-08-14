@@ -3,25 +3,25 @@ from solutions.sol_1768 import Solution
 
 cases = [
     {
-        'input': {
-            'word1': 'abc',
-            'word2': 'pqr',
+        "input": {
+            "word1": "abc",
+            "word2": "pqr",
         },
-        'output': 'apbqcr'
+        "output": "apbqcr",
     },
     {
-        'input': {
-            'word1': 'ab',
-            'word2': 'pqrs',
+        "input": {
+            "word1": "ab",
+            "word2": "pqrs",
         },
-        'output': 'apbqrs'
+        "output": "apbqrs",
     },
     {
-        'input': {
-            'word1': 'abcd',
-            'word2': 'pq',
+        "input": {
+            "word1": "abcd",
+            "word2": "pq",
         },
-        'output': 'apbqcd'
+        "output": "apbqcd",
     },
 ]
 
@@ -29,7 +29,10 @@ cases = [
 @pytest.mark.sol1768
 def test_run():
     for case in cases:
-        assert Solution.merge_alternately(
-            word1=case['input']['word1'],
-            word2=case['input']['word2'],
-        ) == case['output']
+        assert (
+            Solution.merge_alternately(
+                word1=case["input"]["word1"],
+                word2=case["input"]["word2"],
+            )
+            == case["output"]
+        )

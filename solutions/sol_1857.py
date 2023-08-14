@@ -37,7 +37,7 @@ class Solution:
         if dc < n:
             return -1
 
-        colors = list(map(lambda x: ord(x) - ord('a'), colors))
+        colors = list(map(lambda x: ord(x) - ord("a"), colors))
 
         # dp[i][j] 는 i번 노드로부터 시작하는 모든 경로의 j 색상의 빈도중 최댓값
         dp = [[-1] * 26 for _ in range(n)]

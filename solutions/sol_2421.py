@@ -46,4 +46,3 @@ class Solution:
             for count in group.values():
                 answer += (count * (count - 1)) // 2
         return answer + n
-

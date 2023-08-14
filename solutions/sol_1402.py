@@ -12,7 +12,7 @@ class Solution:
         cur = 0
         idx = 1
         for i in range(start, n):
-            cur += (satisfaction[i] * idx)
+            cur += satisfaction[i] * idx
             idx += 1
 
         for i in range(1, n):
@@ -20,8 +20,8 @@ class Solution:
         satisfaction.append(0)
 
         answer = cur
-        total = satisfaction[n-1]
+        total = satisfaction[n - 1]
         for s in range(start - 1, -1, -1):
-            cur += (total - satisfaction[s - 1])
+            cur += total - satisfaction[s - 1]
             answer = max(answer, cur)
         return answer

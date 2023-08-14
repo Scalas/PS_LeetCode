@@ -11,12 +11,12 @@ class Solution:
             arr = []
             for j in range(n):
                 arr.append(grid[i][j])
-            count['_'.join(map(str, arr))] += 1
+            count["_".join(map(str, arr))] += 1
 
         answer = 0
         for i in range(n):
             arr = []
             for j in range(n):
                 arr.append(grid[j][i])
-            answer += count['_'.join(map(str, arr))]
+            answer += count["_".join(map(str, arr))]
         return answer

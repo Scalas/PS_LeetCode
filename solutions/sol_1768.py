@@ -8,4 +8,4 @@ class Solution:
                 st.append(word1[i])
             if i < m:
                 st.append(word2[i])
-        return ''.join(st)
+        return "".join(st)

@@ -5,16 +5,16 @@ from solutions.sol_1161 import Solution
 
 cases = [
     {
-        'input': {
-            'root': [1, 7, 0, 7, -8, None, None],
+        "input": {
+            "root": [1, 7, 0, 7, -8, None, None],
         },
-        'output': 2,
+        "output": 2,
     },
     {
-        'input': {
-            'root': [989, None, 10250, 98693, -89388, None, None, None, -32127],
+        "input": {
+            "root": [989, None, 10250, 98693, -89388, None, None, None, -32127],
         },
-        'output': 2.
+        "output": 2.0,
     },
 ]
 
@@ -22,6 +22,7 @@ cases = [
 @pytest.mark.sol_1161
 def test_run():
     for case in cases:
-        assert Solution.max_level_sum(
-            root=list_to_tree(case['input']['root'])
-        ) == case['output']
+        assert (
+            Solution.max_level_sum(root=list_to_tree(case["input"]["root"]))
+            == case["output"]
+        )

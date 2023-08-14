@@ -5,7 +5,7 @@ class Solution:
     @staticmethod
     def count_routes(locations: List[int], start: int, finish: int, fuel: int) -> int:
         n = len(locations)
-        mod = 10 ** 9 + 7
+        mod = 10**9 + 7
         dp = [[-1] * (fuel + 1) for _ in range(n)]
 
         def dfs(cur, fuel):

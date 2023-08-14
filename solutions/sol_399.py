@@ -3,7 +3,9 @@ from typing import List
 
 class Solution:
     @staticmethod
-    def calc_equation(equations: List[List[str]], values: List[float], queries: List[List[str]]) -> List[float]:
+    def calc_equation(
+        equations: List[List[str]], values: List[float], queries: List[List[str]]
+    ) -> List[float]:
         n, m = len(equations), len(queries)
         index = dict()
         idx = 0

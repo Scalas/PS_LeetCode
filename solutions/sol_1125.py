@@ -3,9 +3,11 @@ from typing import List
 
 class Solution:
     @staticmethod
-    def smallest_sufficient_team(req_skills: List[str], people: List[List[str]]) -> List[int]:
+    def smallest_sufficient_team(
+        req_skills: List[str], people: List[List[str]]
+    ) -> List[int]:
         skill_map = dict()
-        INF = 10 ** 9
+        INF = 10**9
         bit = 1
         people_bit = []
         for skills in people:

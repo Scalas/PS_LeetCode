@@ -12,6 +12,7 @@ class Solution:
                 inverse(cur.left)
             if cur.right:
                 inverse(cur.right)
+
         if root:
             inverse(root)
         return root

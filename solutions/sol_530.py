@@ -2,7 +2,7 @@ from typing import Optional
 
 from leet_code_types.leet_code_types import TreeNode
 
-INF = 10 ** 9
+INF = 10**9
 
 
 class Solution:

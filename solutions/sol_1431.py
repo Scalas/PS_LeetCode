@@ -8,5 +8,5 @@ class Solution:
         maxv = max(candies)
         for i in range(len(candies)):
             answer.append(candies[i] + extraCandies >= maxv)
-        
+
         return answer

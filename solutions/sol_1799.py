@@ -35,4 +35,5 @@ class Solution:
                         res = max(res, dfs(cur + 1, nvisit) + cur * gcd_mem[s][e])
                 dp[visit] = res
             return dp[visit]
+
         return dfs(1, 0)

@@ -8,7 +8,7 @@ class Solution:
         m = len(batteries)
         batteries.sort(reverse=True)
         cand = batteries[:n]
-        remain =  batteries[n:]
+        remain = batteries[n:]
 
         def check(time):
             plus = [(0, num) for num in remain]

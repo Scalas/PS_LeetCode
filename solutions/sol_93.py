@@ -11,7 +11,7 @@ class Solution:
         def dfs(cur, slot):
             if cur == n:
                 if slot == 4:
-                    answer.append('.'.join(map(lambda x: ''.join(x), address)))
+                    answer.append(".".join(map(lambda x: "".join(x), address)))
                 return
 
             if slot < 4:
@@ -19,13 +19,14 @@ class Solution:
                 dfs(cur + 1, slot + 1)
                 address[slot].pop()
             if slot > 0:
-                if address[slot - 1][0] == '0':
+                if address[slot - 1][0] == "0":
                     return
                 address[slot - 1].append(s[cur])
-                if int(''.join(address[slot - 1])) > 255:
+                if int("".join(address[slot - 1])) > 255:
                     address[slot - 1].pop()
                     return
                 dfs(cur + 1, slot)
                 address[slot - 1].pop()
+
         dfs(0, 0)
         return answer

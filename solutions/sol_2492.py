@@ -22,7 +22,7 @@ class Solution:
                     nq.append(nxt)
             q = nq
 
-        min_road = 10 ** 5
+        min_road = 10**5
         for u, v, w in roads:
             if visited[u] and visited[v]:
                 min_road = min(min_road, w)

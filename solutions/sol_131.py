@@ -24,7 +24,7 @@ class Solution:
                     answer.append(palindrome[:])
                 return
             if is_palindrome[start][cur]:
-                palindrome.append(s[start:cur + 1])
+                palindrome.append(s[start : cur + 1])
                 dfs(cur + 1, cur + 1)
                 palindrome.pop()
             dfs(cur + 1, start)

@@ -5,22 +5,22 @@ from solutions.sol_24 import Solution
 
 cases = [
     {
-        'input': {
-            'head': [1, 2, 3, 4],
+        "input": {
+            "head": [1, 2, 3, 4],
         },
-        'output': [2, 1, 4, 3],
+        "output": [2, 1, 4, 3],
     },
     {
-        'input': {
-            'head': [],
+        "input": {
+            "head": [],
         },
-        'output': [],
+        "output": [],
     },
     {
-        'input': {
-            'head': [1],
+        "input": {
+            "head": [1],
         },
-        'output': [1],
+        "output": [1],
     },
 ]
 
@@ -28,6 +28,9 @@ cases = [
 @pytest.mark.sol24
 def test_run():
     for case in cases:
-        assert compare_linked_list(Solution.swap_pairs(
-            head=list_to_linked_list(case['input']['head']),
-        ), list_to_linked_list(case['output']))
+        assert compare_linked_list(
+            Solution.swap_pairs(
+                head=list_to_linked_list(case["input"]["head"]),
+            ),
+            list_to_linked_list(case["output"]),
+        )

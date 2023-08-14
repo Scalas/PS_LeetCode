@@ -27,7 +27,7 @@ class Solution:
         count = 0
         s, e = 0, 0
         m = len(cands)
-        answer = float('inf')
+        answer = float("inf")
         while e < m:
             for i in cands_id[cands[e]]:
                 if not id_count[i]:

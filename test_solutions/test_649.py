@@ -3,34 +3,34 @@ from solutions.sol_649 import Solution
 
 cases = [
     {
-        'input': {
-            'senate': 'RD',
+        "input": {
+            "senate": "RD",
         },
-        'output': 'Radiant'
+        "output": "Radiant",
     },
     {
-        'input': {
-            'senate': 'RDD',
+        "input": {
+            "senate": "RDD",
         },
-        'output': 'Dire'
+        "output": "Dire",
     },
     {
-        'input': {
-            'senate': 'RRDDD',
+        "input": {
+            "senate": "RRDDD",
         },
-        'output': 'Radiant'
+        "output": "Radiant",
     },
     {
-        'input': {
-            'senate': 'DDRRR',
+        "input": {
+            "senate": "DDRRR",
         },
-        'output': 'Dire'
+        "output": "Dire",
     },
     {
-        'input': {
-            'senate': 'DRRDRDRDRDDRDRDR',
+        "input": {
+            "senate": "DRRDRDRDRDDRDRDR",
         },
-        'output': 'Radiant'
+        "output": "Radiant",
     },
 ]
 
@@ -38,6 +38,9 @@ cases = [
 @pytest.mark.sol_649
 def test_run():
     for case in cases:
-        assert Solution.predict_party_victory(
-            senate=case['input']['senate'],
-        ) == case['output']
+        assert (
+            Solution.predict_party_victory(
+                senate=case["input"]["senate"],
+            )
+            == case["output"]
+        )

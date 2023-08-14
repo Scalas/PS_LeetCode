@@ -3,22 +3,22 @@ from solutions.sol_864 import Solution
 
 cases = [
     {
-        'input': {
-            'grid': ["@.a..", "###.#", "b.A.B"],
+        "input": {
+            "grid": ["@.a..", "###.#", "b.A.B"],
         },
-        'output': 8
+        "output": 8,
     },
     {
-        'input': {
-            'grid': ["@..aA", "..B#.", "....b"],
+        "input": {
+            "grid": ["@..aA", "..B#.", "....b"],
         },
-        'output': 6
+        "output": 6,
     },
     {
-        'input': {
-            'grid': ["@Aa"],
+        "input": {
+            "grid": ["@Aa"],
         },
-        'output': -1
+        "output": -1,
     },
 ]
 
@@ -26,6 +26,7 @@ cases = [
 @pytest.mark.sol864
 def test_run():
     for case in cases:
-        assert Solution.shortest_path_all_keys(
-            grid=case['input']['grid']
-        ) == case['output']
+        assert (
+            Solution.shortest_path_all_keys(grid=case["input"]["grid"])
+            == case["output"]
+        )

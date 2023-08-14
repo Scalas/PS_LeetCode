@@ -19,10 +19,10 @@ class Solution:
                 if len(buf) == 1:
                     res.append(str(buf[0]))
                 else:
-                    res.append(f'{buf[0]}->{buf[1]}')
+                    res.append(f"{buf[0]}->{buf[1]}")
                 buf = [num]
         if len(buf) == 1:
             res.append(str(buf[0]))
         else:
-            res.append(f'{buf[0]}->{buf[1]}')
+            res.append(f"{buf[0]}->{buf[1]}")
         return res

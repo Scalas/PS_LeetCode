@@ -12,7 +12,7 @@ class Solution:
             for j in range(n):
                 if grid[i][j]:
                     q.append((i, j))
-        if len(q) == n ** 2:
+        if len(q) == n**2:
             return -1
         answer = -1
         while q:

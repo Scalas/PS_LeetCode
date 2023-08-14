@@ -5,7 +5,7 @@ class Solution:
     @staticmethod
     def num_of_ways(nums: List[int]) -> int:
         n = len(nums)
-        mod = 10 ** 9 + 7
+        mod = 10**9 + 7
 
         # build BST
         root = nums[0]
@@ -28,7 +28,11 @@ class Solution:
                 return order(g[cur][1], idx + 1, end)
             left = idx - begin
             right = end - idx
-            return (dup_comb(left + 1, right) * order(g[cur][0], begin, idx - 1) * order(g[cur][1], idx + 1, end)) % mod
+            return (
+                dup_comb(left + 1, right)
+                * order(g[cur][0], begin, idx - 1)
+                * order(g[cur][1], idx + 1, end)
+            ) % mod
 
         def dup_comb(x, y):
             res = 1

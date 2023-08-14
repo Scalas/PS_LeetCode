@@ -5,7 +5,6 @@ from leet_code_types.leet_code_types import ListNode
 
 
 class Solution:
-
     def __init__(self, head: Optional[ListNode]):
         self.nums = []
         while head:

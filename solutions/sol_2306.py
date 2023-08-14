@@ -16,7 +16,7 @@ class Solution:
                 category[key] = id_no
                 id_no += 1
             id = category[key]
-            alpha = ord(idea[0]) - ord('a')
+            alpha = ord(idea[0]) - ord("a")
             banned[id].add(alpha)
             postfix[alpha].append(id)
             idea_meta.append((alpha, id))

@@ -3,16 +3,16 @@ from solutions.sol_2405 import Solution
 
 cases = [
     {
-        'input': {
-            's': 'abacaba',
+        "input": {
+            "s": "abacaba",
         },
-        'output': 4,
+        "output": 4,
     },
     {
-        'input': {
-            's': 'ssssss',
+        "input": {
+            "s": "ssssss",
         },
-        'output': 6,
+        "output": 6,
     },
 ]
 
@@ -20,6 +20,9 @@ cases = [
 @pytest.mark.sol_2405
 def test_run():
     for case in cases:
-        assert Solution.partition_string(
-            s=case['input']['s'],
-        ) == case['output']
+        assert (
+            Solution.partition_string(
+                s=case["input"]["s"],
+            )
+            == case["output"]
+        )

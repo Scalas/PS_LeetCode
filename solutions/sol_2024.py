@@ -5,7 +5,7 @@ class Solution:
         tacc, facc = [], []
         tc, fc = 0, 0
         for v in answer_key:
-            if v == 'T':
+            if v == "T":
                 tc += 1
             else:
                 fc += 1

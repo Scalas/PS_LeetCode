@@ -3,7 +3,9 @@ from typing import List
 
 class Solution:
     @staticmethod
-    def valid_path(n: int, edges: List[List[int]], source: int, destination: int) -> bool:
+    def valid_path(
+        n: int, edges: List[List[int]], source: int, destination: int
+    ) -> bool:
         g = [[] for _ in range(n)]
         for u, v in edges:
             g[u - 1].append(v - 1)

@@ -7,7 +7,7 @@ class Solution:
     @staticmethod
     def max_level_sum(root: Optional[TreeNode]) -> int:
         q = [root]
-        answer, max_sum = 0, -10 ** 9
+        answer, max_sum = 0, -(10**9)
         level = 0
         while q:
             level += 1

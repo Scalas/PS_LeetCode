@@ -14,5 +14,3 @@ class Solution:
             last = num
 
         return max(answer, acc)
-
-

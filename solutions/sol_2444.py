@@ -18,8 +18,11 @@ class Solution:
             max_start = min(min_index[-1], max_index[-1])
             res = 0
             for start in range(max_start + 1):
-                min_end = max(min_index[bisect_left(min_index, start)], max_index[bisect_left(max_index, start)])
-                res += (len(sub_nums) - min_end)
+                min_end = max(
+                    min_index[bisect_left(min_index, start)],
+                    max_index[bisect_left(max_index, start)],
+                )
+                res += len(sub_nums) - min_end
             return res
 
         answer = 0

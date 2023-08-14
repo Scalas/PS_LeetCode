@@ -4,9 +4,9 @@ from collections import Counter
 class Solution:
     @staticmethod
     def largest_variance(s: str) -> int:
-        INF = 10 ** 9
+        INF = 10**9
         n = len(s)
-        s = list(map(lambda x: ord(x) - ord('a'), list(s)))
+        s = list(map(lambda x: ord(x) - ord("a"), list(s)))
         alpha_count = Counter(s)
         answer = 0
         for i in range(26):

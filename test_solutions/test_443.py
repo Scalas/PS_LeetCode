@@ -3,22 +3,22 @@ from solutions.sol_443 import Solution
 
 cases = [
     {
-        'input': {
-            'chars': ["a", "a", "b", "b", "c", "c", "c"],
+        "input": {
+            "chars": ["a", "a", "b", "b", "c", "c", "c"],
         },
-        'output': ["a", "2", "b", "2", "c", "3"],
+        "output": ["a", "2", "b", "2", "c", "3"],
     },
     {
-        'input': {
-            'chars': ["a"],
+        "input": {
+            "chars": ["a"],
         },
-        'output': ["a"],
+        "output": ["a"],
     },
     {
-        'input': {
-            'chars': ["a", "b", "b", "b", "b", "b", "b", "b", "b", "b", "b", "b", "b"],
+        "input": {
+            "chars": ["a", "b", "b", "b", "b", "b", "b", "b", "b", "b", "b", "b", "b"],
         },
-        'output': ["a", "b", "1", "2"],
+        "output": ["a", "b", "1", "2"],
     },
 ]
 
@@ -27,6 +27,6 @@ cases = [
 def test_run():
     for case in cases:
         length = Solution.compress(
-            chars=case['input']['chars'],
+            chars=case["input"]["chars"],
         )
-        assert case['input']['chars'][:length] == case['output']
+        assert case["input"]["chars"][:length] == case["output"]

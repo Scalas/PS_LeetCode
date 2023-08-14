@@ -4,7 +4,7 @@ from typing import List
 class Solution:
     @staticmethod
     def ways(pizza: List[str], k: int) -> int:
-        mod = 10 ** 9 + 7
+        mod = 10**9 + 7
         n, m = len(pizza), len(pizza[0])
         if n + m - 1 < k:
             return 0
@@ -14,7 +14,7 @@ class Solution:
         total = 0
         for i in range(n):
             for j in range(m):
-                a = 1 if pizza[i][j] == 'A' else 0
+                a = 1 if pizza[i][j] == "A" else 0
                 h_acc[i][j] = a
                 if j > 0:
                     h_acc[i][j] += h_acc[i][j - 1]

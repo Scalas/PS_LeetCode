@@ -1,5 +1,5 @@
 class Node:
-    def __init__(self, val='', is_term=False):
+    def __init__(self, val="", is_term=False):
         self.__val = val
         self.__is_term = is_term
         self.__children = dict()
@@ -21,7 +21,6 @@ class Node:
 
 
 class WordDictionary:
-
     def __init__(self):
         self.__root = Node()
 
@@ -47,7 +46,7 @@ class WordDictionary:
     def __search(self, node, word, idx):
         if idx == len(word):
             return node.is_terminal()
-        if word[idx] == '.':
+        if word[idx] == ".":
             for child in node.get_children():
                 if self.__search(child, word, idx + 1):
                     return True

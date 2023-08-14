@@ -3,25 +3,25 @@ from solutions.sol_139 import Solution
 
 cases = [
     {
-        'input': {
-            's': 'leetcode',
-            'word_dict': ['leet', 'code'],
+        "input": {
+            "s": "leetcode",
+            "word_dict": ["leet", "code"],
         },
-        'output': True
+        "output": True,
     },
     {
-        'input': {
-            's': 'applepenapple',
-            'word_dict': ['apple', 'pen'],
+        "input": {
+            "s": "applepenapple",
+            "word_dict": ["apple", "pen"],
         },
-        'output': True
+        "output": True,
     },
     {
-        'input': {
-            's': 'catsandog',
-            'word_dict': ["cats", "dog", "sand", "and", "cat"],
+        "input": {
+            "s": "catsandog",
+            "word_dict": ["cats", "dog", "sand", "and", "cat"],
         },
-        'output': False
+        "output": False,
     },
 ]
 
@@ -29,7 +29,10 @@ cases = [
 @pytest.mark.sol139
 def test_run():
     for case in cases:
-        assert Solution.word_break(
-            s=case['input']['s'],
-            word_dict=case['input']['word_dict'],
-        ) == case['output']
+        assert (
+            Solution.word_break(
+                s=case["input"]["s"],
+                word_dict=case["input"]["word_dict"],
+            )
+            == case["output"]
+        )

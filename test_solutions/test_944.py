@@ -3,22 +3,22 @@ from solutions.sol_944 import Solution
 
 cases = [
     {
-        'input': {
-            'strs': ["cba", "daf", "ghi"],
+        "input": {
+            "strs": ["cba", "daf", "ghi"],
         },
-        'output': 1,
+        "output": 1,
     },
     {
-        'input': {
-            'strs': ["a", "b"],
+        "input": {
+            "strs": ["a", "b"],
         },
-        'output': 0,
+        "output": 0,
     },
     {
-        'input': {
-            'strs': ["zyx", "wvu", "tsr"],
+        "input": {
+            "strs": ["zyx", "wvu", "tsr"],
         },
-        'output': 3,
+        "output": 3,
     },
 ]
 
@@ -26,6 +26,4 @@ cases = [
 @pytest.mark.sol944
 def test_run():
     for case in cases:
-        assert Solution.min_deletion_size(
-            strs=case['input']['strs']
-        ) == case['output']
+        assert Solution.min_deletion_size(strs=case["input"]["strs"]) == case["output"]

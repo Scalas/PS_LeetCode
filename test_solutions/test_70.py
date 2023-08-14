@@ -3,16 +3,16 @@ from solutions.sol_70 import Solution
 
 cases = [
     {
-        'input': {
-            'n': 2,
+        "input": {
+            "n": 2,
         },
-        'output': 2,
+        "output": 2,
     },
     {
-        'input': {
-            'n': 3,
+        "input": {
+            "n": 3,
         },
-        'output': 3,
+        "output": 3,
     },
 ]
 
@@ -20,6 +20,4 @@ cases = [
 @pytest.mark.sol70
 def test_run():
     for case in cases:
-        assert Solution.climb_stairs(
-            n=case['input']['n']
-        ) == case['output']
+        assert Solution.climb_stairs(n=case["input"]["n"]) == case["output"]

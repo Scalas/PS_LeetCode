@@ -6,7 +6,7 @@ ALPHA_COUNT = 26
 class Solution:
     @staticmethod
     def count_sub_trees(n: int, edges: List[List[int]], labels: str) -> List[int]:
-        labels = list(map(lambda x: ord(x) - ord('a'), labels))
+        labels = list(map(lambda x: ord(x) - ord("a"), labels))
         label_count = [[0] * ALPHA_COUNT for _ in range(n)]
         g = [[] for _ in range(n)]
         for u, v in edges:

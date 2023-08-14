@@ -7,7 +7,7 @@ class Solution:
         n, m = len(grid), len(grid[0])
         dp = [[-1] * m for _ in range(n)]
         directions = [(0, 1), (0, -1), (1, 0), (-1, 0)]
-        mod = 10 ** 9 + 7
+        mod = 10**9 + 7
 
         def dfs(r, c):
             if dp[r][c] == -1:

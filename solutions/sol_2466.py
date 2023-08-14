@@ -2,7 +2,7 @@ class Solution:
     @staticmethod
     def count_good_strings(low: int, high: int, zero: int, one: int) -> int:
         answer = 0
-        mod = 10 ** 9 + 7
+        mod = 10**9 + 7
         dp = [-1] * (high + 1)
         dp[0] = 1
         for i in range(1, high + 1):

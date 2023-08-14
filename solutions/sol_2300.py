@@ -4,7 +4,9 @@ from typing import List
 
 class Solution:
     @staticmethod
-    def successful_pairs(spells: List[int], potions: List[int], success: int) -> List[int]:
+    def successful_pairs(
+        spells: List[int], potions: List[int], success: int
+    ) -> List[int]:
         potions.sort()
         n = len(potions)
         answer = []

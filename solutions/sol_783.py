@@ -7,7 +7,7 @@ class Solution:
     @staticmethod
     def min_diff_in_bst(root: Optional[TreeNode]) -> int:
         q = []
-        answer = 10 ** 9
+        answer = 10**9
 
         def dfs(cur):
             nonlocal answer
@@ -18,5 +18,6 @@ class Solution:
             q.append(cur.val)
             if cur.right:
                 dfs(cur.right)
+
         dfs(root)
         return answer

@@ -5,7 +5,9 @@ from leet_code_types.leet_code_types import ListNode
 
 class Solution:
     @staticmethod
-    def merge_two_lists(list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
+    def merge_two_lists(
+        list1: Optional[ListNode], list2: Optional[ListNode]
+    ) -> Optional[ListNode]:
         head = ListNode()
         cur = head
         while list1 and list2:

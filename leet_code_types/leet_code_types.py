@@ -6,7 +6,15 @@ class TreeNode:
 
 
 class QuadTreeNode:
-    def __init__(self, val, is_leaf, top_left=None, top_right=None, bottom_left=None, bottom_right=None):
+    def __init__(
+        self,
+        val,
+        is_leaf,
+        top_left=None,
+        top_right=None,
+        bottom_left=None,
+        bottom_right=None,
+    ):
         self.val = val
         self.is_leaf = is_leaf
         self.top_left = top_left

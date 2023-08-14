@@ -10,7 +10,9 @@ class Solution:
 
         dp = [False] * n
         dp[1] = nums[0] == nums[1]
-        dp[2] = nums[0] == nums[1] == nums[2] or nums[2] - nums[1] == nums[1] - nums[0] == 1
+        dp[2] = (
+            nums[0] == nums[1] == nums[2] or nums[2] - nums[1] == nums[1] - nums[0] == 1
+        )
 
         for i in range(3, n):
             if dp[i - 2] and nums[i - 1] == nums[i]:

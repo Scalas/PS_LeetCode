@@ -15,7 +15,7 @@ class Solution:
                 res += ceil(num / speed)
             return hour - (res + dist[-1] / speed)
 
-        s, e = 1, 10 ** 7
+        s, e = 1, 10**7
         while s < e:
             mid = (s + e) // 2
             c = check(mid)

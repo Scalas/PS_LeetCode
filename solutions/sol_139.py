@@ -10,7 +10,7 @@ class Solution:
             for i in range(n):
                 if s[i] != word[0]:
                     continue
-                if s[i:i+len(word)] == word:
+                if s[i : i + len(word)] == word:
                     g[i].append(i + len(word))
 
         q = [0]

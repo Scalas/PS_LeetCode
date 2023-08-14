@@ -14,7 +14,7 @@ class Solution:
             return bound[n]
 
         answer = 0
-        mod = 10 ** 9 + 7
+        mod = 10**9 + 7
         for i in range(len(nums)):
             num = nums[i]
             b = get_max_bound(target - num)

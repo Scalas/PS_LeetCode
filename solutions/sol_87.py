@@ -5,7 +5,7 @@ class Solution:
         if n == 1:
             return s1 == s2
 
-        alpha_mapper = lambda x: ord(x) - ord('a')
+        alpha_mapper = lambda x: ord(x) - ord("a")
         s1 = list(map(alpha_mapper, s1))
         s2 = list(map(alpha_mapper, s2))
 
@@ -47,7 +47,9 @@ class Solution:
                 lc[c] += 1
                 rc[c] -= 1
                 if lc == olc:
-                    if (split(os, os + i, s, s + i) and split(os + i + 1, oe, s + i + 1, e)):
+                    if split(os, os + i, s, s + i) and split(
+                        os + i + 1, oe, s + i + 1, e
+                    ):
                         mem[key] = True
                         return True
 
@@ -70,7 +72,9 @@ class Solution:
                 lc[c] += 1
                 rc[c] -= 1
                 if lc == olc:
-                    if (split(oe - i, oe, s, s + i) and split(os, oe - i - 1, s + i + 1, e)):
+                    if split(oe - i, oe, s, s + i) and split(
+                        os, oe - i - 1, s + i + 1, e
+                    ):
                         mem[key] = True
                         return True
             mem[key] = False

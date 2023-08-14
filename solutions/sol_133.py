@@ -1,18 +1,20 @@
 class Node:
-    def __init__(self, val = 0, neighbors = None):
+    def __init__(self, val=0, neighbors=None):
         self.val = val
         self.neighbors = neighbors if neighbors is not None else []
 
 
 class Solution:
     @staticmethod
-    def clone_graph(node: 'Node') -> 'Node':
+    def clone_graph(node: "Node") -> "Node":
         clones = dict()
 
         def clone(target):
             if not target:
                 return
-            clone_node = Node(target.val, [neighbor.val for neighbor in target.neighbors])
+            clone_node = Node(
+                target.val, [neighbor.val for neighbor in target.neighbors]
+            )
             clones[target.val] = clone_node
             for neighbor in target.neighbors:
                 if neighbor.val in clones:

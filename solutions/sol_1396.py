@@ -1,5 +1,4 @@
 class UndergroundSystem:
-
     def __init__(self):
         self.book = dict()
         self.history = dict()

@@ -4,16 +4,16 @@ from solutions.sol_22 import Solution
 
 cases = [
     {
-        'input': {
-            'n': 3,
+        "input": {
+            "n": 3,
         },
-        'output': ["((()))", "(()())", "(())()", "()(())", "()()()"],
+        "output": ["((()))", "(()())", "(())()", "()(())", "()()()"],
     },
     {
-        'input': {
-            'n': 1,
+        "input": {
+            "n": 1,
         },
-        'output': ["()"],
+        "output": ["()"],
     },
 ]
 
@@ -21,6 +21,9 @@ cases = [
 @pytest.mark.sol22
 def test_run():
     for case in cases:
-        assert Solution.generate_parenthesis(
-            n=case['input']['n'],
-        ) == case['output']
+        assert (
+            Solution.generate_parenthesis(
+                n=case["input"]["n"],
+            )
+            == case["output"]
+        )

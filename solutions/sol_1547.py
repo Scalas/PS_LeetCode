@@ -16,7 +16,7 @@ class Solution:
                     return 0
                 if left == right:
                     return e - s
-                res = 10 ** 9
+                res = 10**9
                 for m in range(left, right + 1):
                     res = min(res, cost(s, cuts[m]) + cost(cuts[m], e) + e - s)
                 dp[(s, e)] = res

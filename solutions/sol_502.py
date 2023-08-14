@@ -4,7 +4,9 @@ from heapq import heappush, heappop
 
 class Solution:
     @staticmethod
-    def find_maximized_capital(k: int, w: int, profits: List[int], capital: List[int]) -> int:
+    def find_maximized_capital(
+        k: int, w: int, profits: List[int], capital: List[int]
+    ) -> int:
         n = len(profits)
         projects = sorted([(capital[i], profits[i]) for i in range(n)], reverse=True)
         q = []

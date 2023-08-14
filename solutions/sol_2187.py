@@ -7,7 +7,7 @@ class Solution:
         def check(given_time):
             available_trips = 0
             for t in time:
-                available_trips += (given_time // t)
+                available_trips += given_time // t
             return available_trips >= total_trips
 
         s, e = 0, min(time) * total_trips

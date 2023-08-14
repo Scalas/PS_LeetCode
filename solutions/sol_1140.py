@@ -16,7 +16,7 @@ class Solution:
             if dp[cur][m][turn] == -1:
                 res = 0
                 if turn:
-                    res = 10 ** 9
+                    res = 10**9
                     for i in range(m * 2):
                         nxt = cur + i + 1
                         if nxt > n:
@@ -27,8 +27,14 @@ class Solution:
                         nxt = cur + i + 1
                         if nxt > n:
                             break
-                        res = max(res, dfs(nxt, max(m, i + 1), 1 - turn) + piles[nxt - 1] - piles[cur - 1])
+                        res = max(
+                            res,
+                            dfs(nxt, max(m, i + 1), 1 - turn)
+                            + piles[nxt - 1]
+                            - piles[cur - 1],
+                        )
                 dp[cur][m][turn] = res
             return dp[cur][m][turn]
+
         answer = dfs(0, 1, 0)
         return answer

@@ -1,11 +1,13 @@
 from typing import List
 
-INF = 10 ** 9
+INF = 10**9
 
 
 class Solution:
     @staticmethod
-    def shortest_alternating_paths(n: int, red_edges: List[List[int]], blue_edges: List[List[int]]) -> List[int]:
+    def shortest_alternating_paths(
+        n: int, red_edges: List[List[int]], blue_edges: List[List[int]]
+    ) -> List[int]:
         dp = [[INF, INF] for _ in range(n)]
         rg = [[] for _ in range(n)]
         bg = [[] for _ in range(n)]

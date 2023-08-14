@@ -3,10 +3,12 @@ from typing import List
 
 class Solution:
     @staticmethod
-    def profitable_schemes(n: int, min_profit: int, group: List[int], profit: List[int]) -> int:
+    def profitable_schemes(
+        n: int, min_profit: int, group: List[int], profit: List[int]
+    ) -> int:
         m = len(group)
         dp = [[[-1] * (min_profit + 1) for _ in range(n + 1)] for _ in range(m)]
-        mod = 10 ** 9 + 7
+        mod = 10**9 + 7
 
         def dfs(cur, remain, tp):
             if cur == m:

@@ -10,13 +10,14 @@ class Solution:
         group = defaultdict(list)
 
         def dfs(cur):
-            key = f'{cur.val}'
+            key = f"{cur.val}"
             if cur.left:
-                key = dfs(cur.left) + 'L' + key
+                key = dfs(cur.left) + "L" + key
             if cur.right:
-                key = key + 'R' + dfs(cur.right)
+                key = key + "R" + dfs(cur.right)
             group[key].append(cur)
             return key
+
         dfs(root)
 
         answer = []

@@ -1,5 +1,4 @@
 class BrowserHistory:
-
     def __init__(self, homepage: str):
         self.current = homepage
         self.backward_history = []

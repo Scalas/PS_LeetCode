@@ -5,7 +5,7 @@ class Solution:
     @staticmethod
     def distribute_cookies(cookies: List[int], k: int) -> int:
         n = len(cookies)
-        answer = sum(sorted(cookies)[k - 1:])
+        answer = sum(sorted(cookies)[k - 1 :])
 
         def dfs(cur, bags):
             nonlocal answer

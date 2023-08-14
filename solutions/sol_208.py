@@ -1,5 +1,5 @@
 class Node:
-    def __init__(self, val='', is_term=False):
+    def __init__(self, val="", is_term=False):
         self.__val = val
         self.__is_term = is_term
         self.__children = dict()

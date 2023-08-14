@@ -6,7 +6,7 @@ class Solution:
     def min_deletion_size(strs: List[str]) -> int:
         answer = 0
         for column in zip(*strs):
-            pre = 'a'
+            pre = "a"
             for c in column:
                 if c < pre:
                     answer += 1

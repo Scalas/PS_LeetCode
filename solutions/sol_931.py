@@ -2,7 +2,6 @@ from typing import List
 
 
 class Solution:
-
     @staticmethod
     def min_falling_path_sum(matrix: List[List[int]]) -> int:
         n, m = len(matrix), len(matrix[0])

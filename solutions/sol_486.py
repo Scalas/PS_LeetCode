@@ -14,7 +14,10 @@ class Solution:
                 if turn:
                     dp[s][e] = min(dfs(s, e - 1, 1 - turn), dfs(s + 1, e, 1 - turn))
                 else:
-                    dp[s][e] = max(dfs(s, e - 1, 1 - turn) + nums[e], dfs(s + 1, e, 1 - turn) + nums[s])
+                    dp[s][e] = max(
+                        dfs(s, e - 1, 1 - turn) + nums[e],
+                        dfs(s + 1, e, 1 - turn) + nums[s],
+                    )
             return dp[s][e]
-        
+
         return dfs(0, n - 1, 0) * 2 - sum(nums) >= 0

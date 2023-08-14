@@ -8,7 +8,7 @@ class Solution:
             cur_b = b % 2
             if cur_a | cur_b != target:
                 if target == 0:
-                    answer += (cur_a + cur_b)
+                    answer += cur_a + cur_b
                 else:
                     answer += 1
             c //= 2

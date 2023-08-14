@@ -4,16 +4,16 @@ from converter.leet_code_utils import list_to_tree
 
 cases = [
     {
-        'input': {
-            'root': [1, 2, 2, 3, 4, 4, 3],
+        "input": {
+            "root": [1, 2, 2, 3, 4, 4, 3],
         },
-        'output': True,
+        "output": True,
     },
     {
-        'input': {
-            'root': [1, 2, 2, None, 3, None, 3],
+        "input": {
+            "root": [1, 2, 2, None, 3, None, 3],
         },
-        'output': False,
+        "output": False,
     },
 ]
 
@@ -21,6 +21,9 @@ cases = [
 @pytest.mark.sol101
 def test_run():
     for case in cases:
-        assert Solution.is_symmetric(
-            root=list_to_tree(case['input']['root']),
-        ) == case['output']
+        assert (
+            Solution.is_symmetric(
+                root=list_to_tree(case["input"]["root"]),
+            )
+            == case["output"]
+        )

@@ -8,9 +8,9 @@ class Solution:
         count = 0
         for num in nums:
             if num:
-                answer += (count * (count + 1) // 2)
+                answer += count * (count + 1) // 2
                 count = 0
             else:
                 count += 1
-        answer += (count * (count + 1) // 2)
+        answer += count * (count + 1) // 2
         return answer

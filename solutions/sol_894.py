@@ -6,7 +6,6 @@ from leet_code_types.leet_code_types import TreeNode
 class Solution:
     @staticmethod
     def all_possible_fbt(n: int) -> List[Optional[TreeNode]]:
-
         def copy(r: Optional[TreeNode]):
             res = TreeNode(0)
             if r.left:
@@ -38,13 +37,13 @@ class Solution:
                 nq = []
                 for cur in q:
                     if not cur:
-                        res.append('-')
+                        res.append("-")
                     else:
-                        res.append('0')
+                        res.append("0")
                         nq.append(cur.left)
                         nq.append(cur.right)
                 q = nq
-            return ''.join(res)
+            return "".join(res)
 
         if n % 2 == 0:
             return []

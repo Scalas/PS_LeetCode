@@ -1,10 +1,13 @@
 from typing import List
-INF = 10 ** 9
+
+INF = 10**9
 
 
 class Solution:
     @staticmethod
-    def find_cheapest_price(n: int, flights: List[List[int]], src: int, dst: int, k: int) -> int:
+    def find_cheapest_price(
+        n: int, flights: List[List[int]], src: int, dst: int, k: int
+    ) -> int:
         g = [[] for _ in range(n)]
         for u, v, d in flights:
             g[u].append((v, d))

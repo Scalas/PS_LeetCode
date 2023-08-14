@@ -16,4 +16,5 @@ class Solution:
             if not dfs(cur1.right, cur2.right):
                 return False
             return True
+
         return dfs(p, q)

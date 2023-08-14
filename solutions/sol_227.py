@@ -1,5 +1,5 @@
 class Solution:
-    operator = {'+': 0, '-': 0, '*': 1, '/': 1}
+    operator = {"+": 0, "-": 0, "*": 1, "/": 1}
 
     @staticmethod
     def calculate(s: str) -> int:
@@ -25,26 +25,26 @@ class Solution:
 
     @staticmethod
     def tokenize(s: str):
-        s = s.replace(' ', '')
+        s = s.replace(" ", "")
         res = []
         buf = []
         for c in s:
             if c not in Solution.operator.keys():
                 buf.append(c)
             else:
-                res.append(int(''.join(buf)))
+                res.append(int("".join(buf)))
                 res.append(c)
                 buf = []
-        res.append(int(''.join(buf)))
+        res.append(int("".join(buf)))
         return res
 
     @staticmethod
     def operation(oprd1, oprd2, operator):
-        if operator == '+':
+        if operator == "+":
             return oprd1 + oprd2
-        elif operator == '-':
+        elif operator == "-":
             return oprd1 - oprd2
-        elif operator == '*':
+        elif operator == "*":
             return oprd1 * oprd2
         else:
             return oprd1 // oprd2

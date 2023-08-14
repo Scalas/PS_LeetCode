@@ -17,5 +17,3 @@ class Solution:
             if wk[word] != word_key or kw[word_key] != word:
                 return False
         return True
-
-

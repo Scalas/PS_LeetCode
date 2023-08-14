@@ -3,16 +3,16 @@ from solutions.sol_2390 import Solution
 
 cases = [
     {
-        'input': {
-            's': 'leet**cod*e',
+        "input": {
+            "s": "leet**cod*e",
         },
-        'output': 'lecoe',
+        "output": "lecoe",
     },
     {
-        'input': {
-            's': 'erase*****',
+        "input": {
+            "s": "erase*****",
         },
-        'output': '',
+        "output": "",
     },
 ]
 
@@ -20,6 +20,9 @@ cases = [
 @pytest.mark.sol_2390
 def test_run():
     for case in cases:
-        assert Solution.remove_stars(
-            s=case['input']['s'],
-        ) == case['output']
+        assert (
+            Solution.remove_stars(
+                s=case["input"]["s"],
+            )
+            == case["output"]
+        )

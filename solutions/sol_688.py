@@ -5,8 +5,17 @@ class Solution:
     @staticmethod
     def knight_probability(n: int, k: int, row: int, column: int) -> float:
         q = {(row, column): 1}
-        directions = [(1, 2), (2, 1), (1, -2), (2, -1), (-1, 2), (-2, 1), (-1, -2), (-2, -1)]
-        total = 8 ** k
+        directions = [
+            (1, 2),
+            (2, 1),
+            (1, -2),
+            (2, -1),
+            (-1, 2),
+            (-2, 1),
+            (-1, -2),
+            (-2, -1),
+        ]
+        total = 8**k
         while q and k:
             nq = defaultdict(int)
             for pos, count in q.items():

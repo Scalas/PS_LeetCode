@@ -39,7 +39,10 @@ class Solution:
             if connected:
                 connect += 1
 
-        if sum(map(lambda x: 1 if x < 0 else 0, au)) > 1 or sum(map(lambda x: 1 if x < 0 else 0, bu)) > 1:
+        if (
+            sum(map(lambda x: 1 if x < 0 else 0, au)) > 1
+            or sum(map(lambda x: 1 if x < 0 else 0, bu)) > 1
+        ):
             return -1
 
         return len(edges) - connect

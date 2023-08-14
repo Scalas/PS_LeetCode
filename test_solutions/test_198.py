@@ -3,16 +3,16 @@ from solutions.sol_198 import Solution
 
 cases = [
     {
-        'input': {
-            'nums': [1, 2, 3, 1],
+        "input": {
+            "nums": [1, 2, 3, 1],
         },
-        'output': 4,
+        "output": 4,
     },
     {
-        'input': {
-            'nums': [2, 7, 9, 3, 1],
+        "input": {
+            "nums": [2, 7, 9, 3, 1],
         },
-        'output': 12,
+        "output": 12,
     },
 ]
 
@@ -20,6 +20,9 @@ cases = [
 @pytest.mark.sol198
 def test_run():
     for case in cases:
-        assert Solution.rob(
-            nums=case['input']['nums'],
-        ) == case['output']
+        assert (
+            Solution.rob(
+                nums=case["input"]["nums"],
+            )
+            == case["output"]
+        )

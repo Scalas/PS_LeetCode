@@ -3,7 +3,9 @@ from typing import List
 
 class Solution:
     @staticmethod
-    def num_of_minutes(n: int, head_id: int, manager: List[int], inform_time: List[int]) -> int:
+    def num_of_minutes(
+        n: int, head_id: int, manager: List[int], inform_time: List[int]
+    ) -> int:
         g = [[] for _ in range(n)]
         for i in range(n):
             if i == head_id:

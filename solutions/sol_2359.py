@@ -31,7 +31,7 @@ class Solution:
                 break
 
         answer = -1
-        dmax = 10 ** 9
+        dmax = 10**9
         for i in range(n):
             if d1[i] == -1 or d2[i] == -1:
                 continue

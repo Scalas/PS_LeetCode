@@ -3,12 +3,10 @@ from leet_code_types.leet_code_types import TreeNode
 
 
 class Solution:
-
-    mod = 10 ** 9 + 7
+    mod = 10**9 + 7
 
     @staticmethod
     def max_product(root: Optional[TreeNode]) -> int:
-
         nodes = []
 
         def dfs(cur):

@@ -3,16 +3,16 @@ from solutions.sol_55 import Solution
 
 cases = [
     {
-        'input': {
-            'nums': [2, 3, 1, 1, 4],
+        "input": {
+            "nums": [2, 3, 1, 1, 4],
         },
-        'output': True
+        "output": True,
     },
     {
-        'input': {
-            'nums': [3, 2, 1, 0, 4],
+        "input": {
+            "nums": [3, 2, 1, 0, 4],
         },
-        'output': False
+        "output": False,
     },
 ]
 
@@ -20,6 +20,9 @@ cases = [
 @pytest.mark.sol55
 def test_run():
     for case in cases:
-        assert Solution.can_jump(
-            nums=case['input']['nums'],
-        ) == case['output']
+        assert (
+            Solution.can_jump(
+                nums=case["input"]["nums"],
+            )
+            == case["output"]
+        )

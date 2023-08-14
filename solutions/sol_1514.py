@@ -4,7 +4,9 @@ from typing import List
 
 class Solution:
     @staticmethod
-    def max_probability(n: int, edges: List[List[int]], succ_prob: List[float], start: int, end: int) -> float:
+    def max_probability(
+        n: int, edges: List[List[int]], succ_prob: List[float], start: int, end: int
+    ) -> float:
         g = [[] for _ in range(n)]
         for i in range(len(edges)):
             u, v = edges[i]

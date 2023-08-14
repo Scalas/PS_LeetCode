@@ -4,7 +4,9 @@ from typing import List
 
 class Solution:
     @staticmethod
-    def maximum_bags(capacity: List[int], rocks: List[int], additional_rocks: int) -> int:
+    def maximum_bags(
+        capacity: List[int], rocks: List[int], additional_rocks: int
+    ) -> int:
         empty_bags = []
         answer = 0
         for i in range(len(capacity)):

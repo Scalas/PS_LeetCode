@@ -3,32 +3,32 @@ from solutions.sol_859 import Solution
 
 cases = [
     {
-        'input': {
-            's': 'ab',
-            'goal': 'ba',
+        "input": {
+            "s": "ab",
+            "goal": "ba",
         },
-        'output': True
+        "output": True,
     },
     {
-        'input': {
-            's': 'ab',
-            'goal': 'ab',
+        "input": {
+            "s": "ab",
+            "goal": "ab",
         },
-        'output': False
-    },
-    {                                                                                                                                                                                                                                                                           
-        'input': {
-            's': 'aa',
-            'goal': 'aa',
-        },
-        'output': True
+        "output": False,
     },
     {
-        'input': {
-            's': 'ab',
-            'goal': 'babb',
+        "input": {
+            "s": "aa",
+            "goal": "aa",
         },
-        'output': False
+        "output": True,
+    },
+    {
+        "input": {
+            "s": "ab",
+            "goal": "babb",
+        },
+        "output": False,
     },
 ]
 
@@ -36,7 +36,10 @@ cases = [
 @pytest.mark.sol859
 def test_run():
     for case in cases:
-        assert Solution.buddy_strings(
-            s=case['input']['s'],
-            goal=case['input']['goal'],
-        ) == case['output']
+        assert (
+            Solution.buddy_strings(
+                s=case["input"]["s"],
+                goal=case["input"]["goal"],
+            )
+            == case["output"]
+        )

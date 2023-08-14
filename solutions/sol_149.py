@@ -51,7 +51,7 @@ class Solution:
             for j in range(i + 1, n):
                 x2, y2 = points[j]
                 if x1 == x2:
-                    count['inf'] += 1
+                    count["inf"] += 1
                     continue
                 count[(y1 - y2) / (x1 - x2)] += 1
             answer = max(answer, max(count.values()) + 1)

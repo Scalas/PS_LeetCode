@@ -1,5 +1,4 @@
 class SnapshotArray:
-
     def __init__(self, length: int):
         self.snapshot = [dict()]
         self.dirty = 0
@@ -24,4 +23,5 @@ class SnapshotArray:
                 return val
             self.snapshot[sid][idx] = find(sid - 1, idx)
             return self.snapshot[sid][idx]
+
         return find(snap_id, index)

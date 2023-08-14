@@ -9,7 +9,7 @@ class Solution:
         r = deque()
         d = deque()
         for i in range(n - 1, -1, -1):
-            if senate[i] == 'R':
+            if senate[i] == "R":
                 r.append(i)
             else:
                 d.append(i)
@@ -20,15 +20,15 @@ class Solution:
                 idx = 0
             if banned[idx]:
                 continue
-            if senate[idx] == 'R':
+            if senate[idx] == "R":
                 r.appendleft(r.pop())
                 if d:
                     banned[d.pop()] = True
                 if not d:
-                    return 'Radiant'
+                    return "Radiant"
             else:
                 d.appendleft(d.pop())
                 if r:
                     banned[r.pop()] = True
                 if not r:
-                    return 'Dire'
+                    return "Dire"

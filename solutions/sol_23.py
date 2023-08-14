@@ -6,7 +6,6 @@ from leet_code_types.leet_code_types import ListNode
 class Solution:
     @staticmethod
     def merge_k_lists(lists: List[Optional[ListNode]]):
-
         if not lists:
             return None
 

@@ -2,7 +2,6 @@ from heapq import heappop, heappush
 
 
 class SmallestInfiniteSet:
-
     def __init__(self):
         self.cur = 1
         self.retrieved = []

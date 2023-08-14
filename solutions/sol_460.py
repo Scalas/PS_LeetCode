@@ -2,7 +2,6 @@ from heapq import heappush, heappop
 
 
 class LFUCache:
-
     def __init__(self, capacity: int):
         self.count = dict()
         self.recently_used = dict()

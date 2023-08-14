@@ -5,12 +5,12 @@ class Solution:
     @staticmethod
     def snakes_and_ladders(board: List[List[int]]) -> int:
         n = len(board)
-        node_num = n ** 2
+        node_num = n**2
         g = [-1] * (node_num + 1)
         for i in range(n):
             start = (n - i) * n
             if i % 2 != n % 2:
-                start -= (n - 1)
+                start -= n - 1
             step = 1 if i % 2 != n % 2 else -1
             for j in range(n):
                 cur = start + j * step

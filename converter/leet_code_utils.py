@@ -87,7 +87,6 @@ def compare_tree(t1: Optional[TreeNode], t2: Optional[TreeNode]):
 
 
 def list_to_quad_tree(tree: List[List[int]]) -> Optional[QuadTreeNode]:
-
     if not tree:
         return
 
@@ -183,7 +182,9 @@ def list_to_linked_list(python_list: List[int]) -> Optional[ListNode]:
     return head
 
 
-def list_to_cyclic_linked_list(python_list: List[int], cycle_start) -> List[Optional[ListNode]]:
+def list_to_cyclic_linked_list(
+    python_list: List[int], cycle_start
+) -> List[Optional[ListNode]]:
     if not python_list:
         return [None, None]
 

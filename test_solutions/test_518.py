@@ -3,25 +3,25 @@ from solutions.sol_518 import Solution
 
 cases = [
     {
-        'input': {
-            'amount': 5,
-            'coins': [1, 2, 5],
+        "input": {
+            "amount": 5,
+            "coins": [1, 2, 5],
         },
-        'output': 4,
+        "output": 4,
     },
     {
-        'input': {
-            'amount': 3,
-            'coins': [2],
+        "input": {
+            "amount": 3,
+            "coins": [2],
         },
-        'output': 0,
+        "output": 0,
     },
     {
-        'input': {
-            'amount': 10,
-            'coins': [10],
+        "input": {
+            "amount": 10,
+            "coins": [10],
         },
-        'output': 1,
+        "output": 1,
     },
 ]
 
@@ -29,7 +29,10 @@ cases = [
 @pytest.mark.sol_518
 def test_run():
     for case in cases:
-        assert Solution.change(
-            amount=case['input']['amount'],
-            coins=case['input']['coins'],
-        ) == case['output']
+        assert (
+            Solution.change(
+                amount=case["input"]["amount"],
+                coins=case["input"]["coins"],
+            )
+            == case["output"]
+        )

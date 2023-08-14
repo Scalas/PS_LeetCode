@@ -1,4 +1,4 @@
 class Solution:
     @staticmethod
     def bulb_switch(n: int) -> int:
-        return int(n**.5)
+        return int(n**0.5)

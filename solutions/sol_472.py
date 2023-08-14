@@ -12,7 +12,7 @@ class Solution:
                 answer.add(w)
                 return
             for end in range(start, len(w)):
-                part = w[start:end + 1]
+                part = w[start : end + 1]
                 if part in word_set:
                     dfs(w, end + 1)
 

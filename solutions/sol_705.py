@@ -1,5 +1,4 @@
 class MyHashSet:
-
     def __init__(self):
         self.bucket = [0] * 1000001
 

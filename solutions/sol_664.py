@@ -9,7 +9,7 @@ class Solution:
             if st and st[-1] == c:
                 continue
             st.append(c)
-        s = ''.join(st)
+        s = "".join(st)
         n = len(s)
         idx = defaultdict(list)
         for i in range(n):
@@ -19,7 +19,7 @@ class Solution:
         def dfs(l, r, bg):
             if l > r:
                 return 0
-            ch = ord(s[l]) - ord('a') + 1
+            ch = ord(s[l]) - ord("a") + 1
             if l == r:
                 return 1 if ch != bg else 0
             if dp[l][r][bg] == -1:
@@ -35,4 +35,5 @@ class Solution:
                         res = min(res, dfs(l, mid, bg) + dfs(mid + 1, r, bg))
                 dp[l][r][bg] = res
             return dp[l][r][bg]
+
         return dfs(0, n - 1, 0)

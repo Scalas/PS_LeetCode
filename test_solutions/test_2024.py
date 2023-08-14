@@ -3,25 +3,25 @@ from solutions.sol_2024 import Solution
 
 cases = [
     {
-        'input': {
-            'answer_key': 'TTFF',
-            'k': 2,
+        "input": {
+            "answer_key": "TTFF",
+            "k": 2,
         },
-        'output': 4,
+        "output": 4,
     },
     {
-        'input': {
-            'answer_key': 'TFFT',
-            'k': 1,
+        "input": {
+            "answer_key": "TFFT",
+            "k": 1,
         },
-        'output': 3,
+        "output": 3,
     },
     {
-        'input': {
-            'answer_key': 'TTFTTFTT',
-            'k': 1,
+        "input": {
+            "answer_key": "TTFTTFTT",
+            "k": 1,
         },
-        'output': 5,
+        "output": 5,
     },
 ]
 
@@ -29,7 +29,10 @@ cases = [
 @pytest.mark.sol_2024
 def test_run():
     for case in cases:
-        assert Solution.max_consecutive_answers(
-            answer_key=case['input']['answer_key'],
-            k=case['input']['k'],
-        ) == case['output']
+        assert (
+            Solution.max_consecutive_answers(
+                answer_key=case["input"]["answer_key"],
+                k=case["input"]["k"],
+            )
+            == case["output"]
+        )

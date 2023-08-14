@@ -4,7 +4,6 @@ from typing import List
 class Solution:
     @staticmethod
     def is_bipartite(graph: List[List[int]]) -> bool:
-
         n = len(graph)
         group = [-1] * n
 

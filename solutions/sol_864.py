@@ -16,7 +16,7 @@ class Solution:
                 if c.islower():
                     keys[c] = key_id
                     key_id += 1
-                elif c == '@':
+                elif c == "@":
                     sr, sc = i, j
 
         total_key = 2 ** (len(keys)) - 1
@@ -32,7 +32,7 @@ class Solution:
                     if not (0 <= nr < n and 0 <= nc < m):
                         continue
                     nxt = grid[nr][nc]
-                    if nxt == '#':
+                    if nxt == "#":
                         continue
                     if nxt.islower():
                         new_key_state = key_state | (1 << keys[nxt])

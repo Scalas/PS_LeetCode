@@ -11,5 +11,3 @@ class Solution:
             answer += pre
             counter[num] = pre + 1
         return answer
-
-

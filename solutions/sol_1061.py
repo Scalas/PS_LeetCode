@@ -10,15 +10,15 @@ class Solution:
             c1, c2 = s1[i], s2[i]
             Solution.union(u, c1, c2)
 
-        return ''.join(map(lambda x: Solution.to_str(Solution.find(u, x)), base_str))
+        return "".join(map(lambda x: Solution.to_str(Solution.find(u, x)), base_str))
 
     @staticmethod
     def to_ord(c: str):
-        return ord(c) - ord('a')
+        return ord(c) - ord("a")
 
     @staticmethod
     def to_str(c: int):
-        return chr(c + ord('a'))
+        return chr(c + ord("a"))
 
     @staticmethod
     def union(u, a, b):

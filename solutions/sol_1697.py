@@ -3,7 +3,9 @@ from typing import List
 
 class Solution:
     @staticmethod
-    def distance_limited_paths_exist(n: int, edge_list: List[List[int]], queries: List[List[int]]) -> List[bool]:
+    def distance_limited_paths_exist(
+        n: int, edge_list: List[List[int]], queries: List[List[int]]
+    ) -> List[bool]:
         edge_list.sort(key=lambda x: -x[2])
         for i in range(len(queries)):
             queries[i].append(i)

@@ -6,7 +6,7 @@ class Solution:
             return False
         s1_count = [0] * 26
         s2_count = [0] * 26
-        a_ord = ord('a')
+        a_ord = ord("a")
         for i in range(n):
             s1_count[ord(s1[i]) - a_ord] += 1
             s2_count[ord(s2[i]) - a_ord] += 1

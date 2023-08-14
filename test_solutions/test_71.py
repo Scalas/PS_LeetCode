@@ -3,22 +3,22 @@ from solutions.sol_71 import Solution
 
 cases = [
     {
-        'input': {
-            'path': '/home/',
+        "input": {
+            "path": "/home/",
         },
-        'output': '/home',
+        "output": "/home",
     },
     {
-        'input': {
-            'path': '/../',
+        "input": {
+            "path": "/../",
         },
-        'output': '/',
+        "output": "/",
     },
     {
-        'input': {
-            'path': '/../',
+        "input": {
+            "path": "/../",
         },
-        'output': '/',
+        "output": "/",
     },
 ]
 
@@ -26,6 +26,4 @@ cases = [
 @pytest.mark.sol71
 def test_run():
     for case in cases:
-        assert Solution.simplify_path(
-            path=case['input']['path']
-        ) == case['output']
+        assert Solution.simplify_path(path=case["input"]["path"]) == case["output"]

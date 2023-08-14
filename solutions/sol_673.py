@@ -5,7 +5,7 @@ class Solution:
     @staticmethod
     def find_number_of_lis(nums: List[int]) -> int:
         n = len(nums)
-        minus = 10 ** 6
+        minus = 10**6
         nums = list(map(lambda x: x + minus, nums))
 
         def dfs(cur, last) -> Tuple[int, int]:

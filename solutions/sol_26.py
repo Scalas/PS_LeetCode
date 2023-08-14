@@ -9,5 +9,5 @@ class Solution:
             if answer and answer[-1] == num:
                 continue
             answer.append(num)
-        nums[:len(answer)] = answer
+        nums[: len(answer)] = answer
         return len(answer)
