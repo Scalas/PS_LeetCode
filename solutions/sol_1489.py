@@ -1,11 +1,13 @@
 from typing import List
 
-INF = 10 ** 9
+INF = 10**9
 
 
 class Solution:
     @staticmethod
-    def find_critical_and_pseudo_critical_edges(n: int, edges: List[List[int]]) -> List[List[int]]:
+    def find_critical_and_pseudo_critical_edges(
+        n: int, edges: List[List[int]]
+    ) -> List[List[int]]:
         m = len(edges)
         edges = [edges[i] + [i] for i in range(m)]
         edges.sort(key=lambda x: x[2])

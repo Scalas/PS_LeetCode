@@ -21,8 +21,8 @@ cases = [
 def test_run():
     for case in cases:
         assert (
-                Solution.update_matrix(
-                    mat=case["input"]["mat"],
-                )
-                == case["output"]
+            Solution.update_matrix(
+                mat=case["input"]["mat"],
+            )
+            == case["output"]
         )

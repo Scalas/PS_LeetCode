@@ -23,9 +23,9 @@ cases = [
 def test_run():
     for case in cases:
         assert (
-                Solution.max_sliding_window(
-                    nums=case["input"]["nums"],
-                    k=case["input"]["k"],
-                )
-                == case["output"]
+            Solution.max_sliding_window(
+                nums=case["input"]["nums"],
+                k=case["input"]["k"],
+            )
+            == case["output"]
         )

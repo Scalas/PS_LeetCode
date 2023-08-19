@@ -30,9 +30,9 @@ cases = [
 def test_run():
     for case in cases:
         assert (
-                Solution.maximal_network_rank(
-                    n=case["input"]["n"],
-                    roads=case["input"]["roads"],
-                )
-                == case["output"]
+            Solution.maximal_network_rank(
+                n=case["input"]["n"],
+                roads=case["input"]["roads"],
+            )
+            == case["output"]
         )
