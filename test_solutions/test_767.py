@@ -12,8 +12,8 @@ cases = [
 def test_run():
     for case in cases:
         assert (
-                Solution.reorganize_string(
-                    s=case["input"]["s"],
-                )
-                == case["output"]
+            Solution.reorganize_string(
+                s=case["input"]["s"],
+            )
+            == case["output"]
         )
