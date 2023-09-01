@@ -33,8 +33,8 @@ cases = [
 def test_run():
     for case in cases:
         assert (
-                Solution.minimum_replacement(
-                    nums=case["input"]["nums"],
-                )
-                == case["output"]
+            Solution.minimum_replacement(
+                nums=case["input"]["nums"],
+            )
+            == case["output"]
         )

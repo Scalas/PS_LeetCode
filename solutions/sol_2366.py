@@ -6,7 +6,7 @@ class Solution:
     @staticmethod
     def minimum_replacement(nums: List[int]) -> int:
         answer = 0
-        pre = 10 ** 9 + 1
+        pre = 10**9 + 1
 
         while nums:
             num = nums.pop()

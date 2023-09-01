@@ -1,6 +1,6 @@
 from typing import List
 
-INF = 10 ** 9
+INF = 10**9
 
 
 class Solution:

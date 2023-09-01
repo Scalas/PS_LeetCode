@@ -30,9 +30,9 @@ cases = [
 def test_run():
     for case in cases:
         assert (
-                Solution.min_taps(
-                    n=case["input"]["n"],
-                    ranges=case["input"]["ranges"],
-                )
-                == case["output"]
+            Solution.min_taps(
+                n=case["input"]["n"],
+                ranges=case["input"]["ranges"],
+            )
+            == case["output"]
         )
