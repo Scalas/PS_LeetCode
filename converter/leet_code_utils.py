@@ -191,7 +191,7 @@ def list_to_cyclic_linked_list(
     head = ListNode(python_list[0])
     pos = head
     cycle_start_node = None
-    for i in range(1, len(python_list)):
+    for i in range(len(python_list)):
         num = python_list[i]
         pos.next = ListNode(num)
         pos = pos.next
