@@ -1,5 +1,5 @@
 from typing import List, Optional
-from leet_code_types.leet_code_types import TreeNode, QuadTreeNode, ListNode
+from leet_code_types.leet_code_types import TreeNode, QuadTreeNode, ListNode, ListNodeWithRandomPointer
 
 
 def list_to_tree(tree: List[int]) -> Optional[TreeNode]:
@@ -183,7 +183,7 @@ def list_to_linked_list(python_list: List[int]) -> Optional[ListNode]:
 
 
 def list_to_cyclic_linked_list(
-    python_list: List[int], cycle_start
+        python_list: List[int], cycle_start
 ) -> List[Optional[ListNode]]:
     if not python_list:
         return [None, None]
@@ -201,10 +201,49 @@ def list_to_cyclic_linked_list(
     return [head, cycle_start_node]
 
 
+def list_to_linked_list_with_random_pointer(python_list: List[List[int]]) -> Optional[ListNodeWithRandomPointer]:
+    if not python_list:
+        return None
+
+    res = []
+    for i in range(len(python_list)):
+        value, random = python_list[i]
+        node = ListNodeWithRandomPointer(value)
+        res.append([node, i + 1, random])
+    for node, next, random in res:
+        node.next = None if next == len(res) else res[next][0]
+        node.random = None if not random else res[random][0]
+
+    return res[0][0] if res else None
+
+
 def compare_linked_list(list_1: Optional[ListNode], list_2: Optional[ListNode]) -> bool:
     while list_1 and list_2:
         if list_1.val != list_2.val:
             return False
+        list_1 = list_1.next
+        list_2 = list_2.next
+    if list_1 or list_2:
+        return False
+    return True
+
+
+def compare_linked_list_with_random_pointer(
+        list_1: Optional[ListNodeWithRandomPointer],
+        list_2: Optional[ListNodeWithRandomPointer]
+) -> bool:
+    while list_1 and list_2:
+        if list_1 == list_2:
+            return False
+        if list_1.val != list_2.val:
+            return False
+        if list_1.random is None or list_2.random is None:
+            if list_1.random != list_2.random:
+                return False
+        if list_1.random is not None and list_2.random is not None:
+            if list_1.random.val != list_2.random.val:
+                return False
+
         list_1 = list_1.next
         list_2 = list_2.next
     if list_1 or list_2:
