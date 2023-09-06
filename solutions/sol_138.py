@@ -5,7 +5,9 @@ from leet_code_types.leet_code_types import ListNodeWithRandomPointer
 
 class Solution:
     @staticmethod
-    def copy_random_list(head: 'Optional[ListNodeWithRandomPointer]') -> 'Optional[ListNodeWithRandomPointer]':
+    def copy_random_list(
+        head: "Optional[ListNodeWithRandomPointer]",
+    ) -> "Optional[ListNodeWithRandomPointer]":
         nodes = []
         while head:
             head.id = len(nodes)

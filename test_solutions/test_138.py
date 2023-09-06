@@ -1,6 +1,9 @@
 import pytest
 
-from converter.leet_code_utils import list_to_linked_list_with_random_pointer, compare_linked_list_with_random_pointer
+from converter.leet_code_utils import (
+    list_to_linked_list_with_random_pointer,
+    compare_linked_list_with_random_pointer,
+)
 from solutions.sol_138 import Solution
 
 cases = [
@@ -29,8 +32,9 @@ cases = [
 def test_run():
     for case in cases:
         head = list_to_linked_list_with_random_pointer(case["input"]["head"])
-        assert (
-                compare_linked_list_with_random_pointer(Solution.copy_random_list(
-                    head=head,
-                ), head
-        ))
+        assert compare_linked_list_with_random_pointer(
+            Solution.copy_random_list(
+                head=head,
+            ),
+            head,
+        )

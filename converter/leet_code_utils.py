@@ -1,5 +1,10 @@
 from typing import List, Optional
-from leet_code_types.leet_code_types import TreeNode, QuadTreeNode, ListNode, ListNodeWithRandomPointer
+from leet_code_types.leet_code_types import (
+    TreeNode,
+    QuadTreeNode,
+    ListNode,
+    ListNodeWithRandomPointer,
+)
 
 
 def list_to_tree(tree: List[int]) -> Optional[TreeNode]:
@@ -183,7 +188,7 @@ def list_to_linked_list(python_list: List[int]) -> Optional[ListNode]:
 
 
 def list_to_cyclic_linked_list(
-        python_list: List[int], cycle_start
+    python_list: List[int], cycle_start
 ) -> List[Optional[ListNode]]:
     if not python_list:
         return [None, None]
@@ -201,7 +206,9 @@ def list_to_cyclic_linked_list(
     return [head, cycle_start_node]
 
 
-def list_to_linked_list_with_random_pointer(python_list: List[List[int]]) -> Optional[ListNodeWithRandomPointer]:
+def list_to_linked_list_with_random_pointer(
+    python_list: List[List[int]],
+) -> Optional[ListNodeWithRandomPointer]:
     if not python_list:
         return None
 
@@ -229,8 +236,8 @@ def compare_linked_list(list_1: Optional[ListNode], list_2: Optional[ListNode]) 
 
 
 def compare_linked_list_with_random_pointer(
-        list_1: Optional[ListNodeWithRandomPointer],
-        list_2: Optional[ListNodeWithRandomPointer]
+    list_1: Optional[ListNodeWithRandomPointer],
+    list_2: Optional[ListNodeWithRandomPointer],
 ) -> bool:
     while list_1 and list_2:
         if list_1 == list_2:
