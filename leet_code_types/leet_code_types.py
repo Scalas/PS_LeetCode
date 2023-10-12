@@ -1,3 +1,6 @@
+from typing import List
+
+
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
         self.val = val
@@ -34,3 +37,14 @@ class ListNodeWithRandomPointer:
         self.val = x
         self.next = next
         self.random = random
+
+
+class MountainArray:
+    def __init__(self, arr: List[int]):
+        self.arr = arr
+
+    def get(self, index: int) -> int:
+        return self.arr[index]
+
+    def length(self) -> int:
+        return len(self.arr)
