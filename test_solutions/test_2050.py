@@ -25,10 +25,10 @@ cases = [
 def test_run():
     for case in cases:
         assert (
-                Solution.minimum_time(
-                    n=case["input"]["n"],
-                    relations=case["input"]["relations"],
-                    time=case["input"]["time"],
-                )
-                == case["output"]
+            Solution.minimum_time(
+                n=case["input"]["n"],
+                relations=case["input"]["relations"],
+                time=case["input"]["time"],
+            )
+            == case["output"]
         )
