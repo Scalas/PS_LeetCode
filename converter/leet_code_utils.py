@@ -4,6 +4,7 @@ from leet_code_types.leet_code_types import (
     QuadTreeNode,
     ListNode,
     ListNodeWithRandomPointer,
+    NestedInteger,
 )
 
 
@@ -270,3 +271,13 @@ def find_from_tree(root: Optional[TreeNode], target: int) -> Optional[TreeNode]:
             if cur.right:
                 nq.append(cur.right)
         q = nq
+
+
+def map_list_to_nested_integer_list(nested_list: List) -> List[NestedInteger]:
+    def mapper(e):
+        if type(e) is int:
+            return NestedInteger([e], True)
+        mapped = list(map(mapper, e))
+        return NestedInteger(mapped)
+
+    return list(map(mapper, nested_list))

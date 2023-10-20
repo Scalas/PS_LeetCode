@@ -48,3 +48,18 @@ class MountainArray:
 
     def length(self) -> int:
         return len(self.arr)
+
+
+class NestedInteger:
+    def __init__(self, arr: List, isInt: bool = False):
+        self.list = arr
+        self.isInt = isInt
+
+    def isInteger(self) -> bool:
+        return self.isInt
+
+    def getInteger(self) -> int:
+        return self.list[0] if self.isInt else None
+
+    def getList(self) -> List:
+        return self.list if not self.isInt else None
