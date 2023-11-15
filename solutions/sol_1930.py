@@ -6,7 +6,7 @@ class Solution:
     def count_palindromic_subsequence(s: str) -> int:
         ar = [[] for _ in range(26)]
         for i in range(len(s)):
-            ar[ord(s[i]) - ord('a')].append(i)
+            ar[ord(s[i]) - ord("a")].append(i)
 
         answer = 0
         for c in range(26):

@@ -27,8 +27,8 @@ cases = [
 def test_run():
     for case in cases:
         assert (
-                Solution.count_palindromic_subsequence(
-                    s=case["input"]["s"],
-                )
-                == case["output"]
+            Solution.count_palindromic_subsequence(
+                s=case["input"]["s"],
+            )
+            == case["output"]
         )
