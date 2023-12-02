@@ -26,6 +26,6 @@ cases = [
 @pytest.mark.sol1611
 def test_run():
     for case in cases:
-        assert Solution.minimum_one_bit_operations(
-            n=case["input"]["n"]
-        ) == case["output"]
+        assert (
+            Solution.minimum_one_bit_operations(n=case["input"]["n"]) == case["output"]
+        )
