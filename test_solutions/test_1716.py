@@ -27,8 +27,8 @@ cases = [
 def test_run():
     for case in cases:
         assert (
-                Solution.total_money(
-                    n=case["input"]["n"],
-                )
-                == case["output"]
+            Solution.total_money(
+                n=case["input"]["n"],
+            )
+            == case["output"]
         )

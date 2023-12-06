@@ -8,7 +8,7 @@ class Solution:
 
         cnt = 0
         for _ in range(r):
-            answer += (base + cnt * 7)
+            answer += base + cnt * 7
             cnt += 1
         answer += ((1 + rem) * rem // 2) + cnt * rem
         return answer
