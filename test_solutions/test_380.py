@@ -4,7 +4,16 @@ from solutions.sol_380 import RandomizedSet
 cases = [
     {
         "input": {
-            "commands": ["RandomizedSet", "insert", "remove", "insert", "getRandom", "remove", "insert", "getRandom"],
+            "commands": [
+                "RandomizedSet",
+                "insert",
+                "remove",
+                "insert",
+                "getRandom",
+                "remove",
+                "insert",
+                "getRandom",
+            ],
             "args": [[], [1], [2], [2], [], [1], [2], []],
         },
         "output": [None, True, False, True, 2, True, False, 2],

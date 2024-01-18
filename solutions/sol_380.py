@@ -1,11 +1,10 @@
 from random import randint
 
-MIN_NUM = - 2 ** 31
-MAX_NUM = 2 ** 31 - 1
+MIN_NUM = -(2**31)
+MAX_NUM = 2**31 - 1
 
 
 class RandomizedSet:
-
     def __init__(self):
         self.rs = set()
         self.ls = []
