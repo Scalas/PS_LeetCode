@@ -37,8 +37,8 @@ cases = [
 def test_run():
     for case in cases:
         assert (
-                Solution.bag_of_tokens_score(
-                    tokens=case["input"]["tokens"], power=case["input"]["power"]
-                )
-                == case["output"]
+            Solution.bag_of_tokens_score(
+                tokens=case["input"]["tokens"], power=case["input"]["power"]
+            )
+            == case["output"]
         )
