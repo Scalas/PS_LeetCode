@@ -11,7 +11,9 @@ class Solution:
         d = defaultdict(list)
         for i in range(len(nums)):
             d[nums[i]].append(i)
-        answer = 0
+        answer = d[0][-1] + 1 if d[0] else 0
         for r in d.values():
-            answer = max(answer, r[-1] - r[0] + 1)
+            if len(r) < 2:
+                continue
+            answer = max(answer, r[-1] - r[0])
         return answer
