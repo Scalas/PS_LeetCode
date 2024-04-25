@@ -29,7 +29,7 @@ cases = [
 ]
 
 
-@pytest.mark.sol_2360
+@pytest.mark.sol_2366
 def test_run():
     for case in cases:
         assert (
