@@ -1,6 +1,6 @@
 import pytest
 
-from converter.leet_code_utils import list_to_linked_list, list_to_cyclic_linked_list
+from converter.leet_code_utils import list_to_cyclic_linked_list
 from solutions.sol_141 import Solution
 
 cases = [
