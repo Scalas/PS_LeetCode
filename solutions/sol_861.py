@@ -16,7 +16,7 @@ class Solution:
             return val
 
         def xor_bit(o1, offset):
-            t = (o1 & offset)
+            t = o1 & offset
             if o1 & offset:
                 return o1 - offset
             return o1 + offset
