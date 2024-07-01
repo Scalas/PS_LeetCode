@@ -23,6 +23,8 @@ with open("test_case.txt", "r", encoding="utf-8") as file:
             case_input = case_input.replace(": ", '": ')
             case_input = case_input.replace(", ", ",")
             case_input = case_input.replace(",", ", ")
+            case_input = case_input.replace("false", "False")
+            case_input = case_input.replace("true", "True")
             for p in line[7:].split(", "):
                 if "=" in p:
                     params.add(p.split(" = ")[0])
@@ -34,6 +36,8 @@ with open("test_case.txt", "r", encoding="utf-8") as file:
                 case_output = case_output[:-1]
             case_output = case_output.replace("null", "None")
             case_output = case_output.replace(",", ", ")
+            case_output = case_output.replace("false", "False")
+            case_output = case_output.replace("true", "True")
             res += f'        "output": {case_output},\n'
             res += "    },\n"
         else:

@@ -4,9 +4,7 @@ from typing import List
 class Solution:
     @staticmethod
     def max_num_edges_to_remove(n: int, edges: List[List[int]]) -> int:
-        au = [-1] * (n + 1)
-        bu = [-1] * (n + 1)
-        au[0] = bu[0] = 0
+        u = [-1] * (n + 1)
 
         def union(u, a, b):
             a = find(u, a)
@@ -19,8 +17,7 @@ class Solution:
                     u[b] += u[a]
                     u[a] = b
                 return True
-            else:
-                return False
+            return False
 
         def find(u, x):
             if u[x] < 0:
@@ -28,21 +25,32 @@ class Solution:
             u[x] = find(u, u[x])
             return u[x]
 
-        connect = 0
-        edges.sort(key=lambda x: -x[0])
-        for t, o1, o2 in edges:
-            connected = False
-            if t % 2:
-                connected = union(au, o1, o2)
-            if t > 1:
-                connected = union(bu, o1, o2)
-            if connected:
-                connect += 1
+        common, alice, bob = [], [], []
+        for t, v, w in edges:
+            if t == 1:
+                alice.append([v, w])
+            elif t == 2:
+                bob.append([v, w])
+            elif t == 3:
+                common.append([v, w])
+            else:
+                continue
 
-        if (
-            sum(map(lambda x: 1 if x < 0 else 0, au)) > 1
-            or sum(map(lambda x: 1 if x < 0 else 0, bu)) > 1
-        ):
+        answer = 0
+        for v, w in common:
+            if not union(u, v, w):
+                answer += 1
+        au = u[:]
+        for v, w in alice:
+            if not union(au, v, w):
+                answer += 1
+        bu = u[:]
+        for v, w in bob:
+            if not union(bu, v, w):
+                answer += 1
+
+        if len([g for g in au if g < 0]) > 2:
             return -1
-
-        return len(edges) - connect
+        if len([g for g in bu if g < 0]) > 2:
+            return -1
+        return answer
