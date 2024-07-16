@@ -1,15 +1,12 @@
 Example 1:
 
-Input: formula = "H2O"
-Output: "H2O"
-Explanation: The count of elements are {'H': 2, 'O': 1}.
+
+Input: root = [5,1,2,3,null,6,4], startValue = 3, destValue = 6
+Output: "UURL"
+Explanation: The shortest path is: 3 → 1 → 5 → 2 → 6.
 Example 2:
 
-Input: formula = "Mg(OH)2"
-Output: "H2MgO2"
-Explanation: The count of elements are {'H': 2, 'Mg': 1, 'O': 2}.
-Example 3:
 
-Input: formula = "K4(ON(SO3)2)2"
-Output: "K4N2O14S4"
-Explanation: The count of elements are {'K': 4, 'N': 2, 'O': 14, 'S': 4}.
+Input: root = [2,1], startValue = 2, destValue = 1
+Output: "L"
+Explanation: The shortest path is: 2 → 1.
