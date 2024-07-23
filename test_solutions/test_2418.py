@@ -4,15 +4,11 @@ from solutions.sol_2418 import Solution
 
 cases = [
     {
-        "input": {
-            "names": ["Mary", "John", "Emma"], "heights": [180, 165, 170]
-        },
+        "input": {"names": ["Mary", "John", "Emma"], "heights": [180, 165, 170]},
         "output": ["Mary", "Emma", "John"],
     },
     {
-        "input": {
-            "names": ["Alice", "Bob", "Bob"], "heights": [155, 185, 150]
-        },
+        "input": {"names": ["Alice", "Bob", "Bob"], "heights": [155, 185, 150]},
         "output": ["Bob", "Alice", "Bob"],
     },
 ]
