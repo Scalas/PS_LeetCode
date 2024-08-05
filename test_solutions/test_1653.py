@@ -4,15 +4,11 @@ from solutions.sol_1653 import Solution
 
 cases = [
     {
-        "input": {
-            "s": "aababbab"
-        },
+        "input": {"s": "aababbab"},
         "output": 2,
     },
     {
-        "input": {
-            "s": "bbaaaaabb"
-        },
+        "input": {"s": "bbaaaaabb"},
         "output": 2,
     },
 ]

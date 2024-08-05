@@ -1,25 +1,21 @@
 Example 1:
 
-Input: nums = [0,1,0,1,1,0,0]
-Output: 1
-Explanation: Here are a few of the ways to group all the 1's together:
-[0,0,1,1,1,0,0] using 1 swap.
-[0,1,1,1,0,0,0] using 1 swap.
-[1,1,0,0,0,0,1] using 2 swaps (using the circular property of the array).
-There is no way to group all 1's together with 0 swaps.
-Thus, the minimum number of swaps required is 1.
+Input: arr = ["d","b","c","b","c","a"], k = 2
+Output: "a"
+Explanation:
+The only distinct strings in arr are "d" and "a".
+"d" appears 1st, so it is the 1st distinct string.
+"a" appears 2nd, so it is the 2nd distinct string.
+Since k == 2, "a" is returned.
 Example 2:
 
-Input: nums = [0,1,1,1,0,0,1,1,0]
-Output: 2
-Explanation: Here are a few of the ways to group all the 1's together:
-[1,1,1,0,0,0,0,1,1] using 2 swaps (using the circular property of the array).
-[1,1,1,1,1,0,0,0,0] using 2 swaps.
-There is no way to group all 1's together with 0 or 1 swaps.
-Thus, the minimum number of swaps required is 2.
+Input: arr = ["aaa","aa","a"], k = 1
+Output: "aaa"
+Explanation:
+All strings in arr are distinct, so the 1st string "aaa" is returned.
 Example 3:
 
-Input: nums = [1,1,0,0,1]
-Output: 0
-Explanation: All the 1's are already grouped together due to the circular property of the array.
-Thus, the minimum number of swaps required is 0.
+Input: arr = ["a","b","a"], k = 3
+Output: ""
+Explanation:
+The only distinct string is "b". Since there are fewer than 3 distinct strings, we return an empty string "".

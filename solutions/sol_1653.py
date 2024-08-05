@@ -5,7 +5,7 @@ class Solution:
         ms = [0 if c == "a" else 1 for c in s]
         for i in ms:
             right[i] += 1
-        answer = 10 ** 6
+        answer = 10**6
         for i in ms:
             right[i] -= 1
             answer = min(answer, left[1] + right[0])

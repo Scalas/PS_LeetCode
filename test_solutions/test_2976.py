@@ -5,19 +5,31 @@ from solutions.sol_2976 import Solution
 cases = [
     {
         "input": {
-            "source": "abcd", "target": "acbe", "original": ["a", "b", "c", "c", "e", "d"], "changed": ["b", "c", "b", "e", "b", "e"], "cost": [2, 5, 5, 1, 2, 20]
+            "source": "abcd",
+            "target": "acbe",
+            "original": ["a", "b", "c", "c", "e", "d"],
+            "changed": ["b", "c", "b", "e", "b", "e"],
+            "cost": [2, 5, 5, 1, 2, 20],
         },
         "output": 28,
     },
     {
         "input": {
-            "source": "aaaa", "target": "bbbb", "original": ["a", "c"], "changed": ["c", "b"], "cost": [1, 2]
+            "source": "aaaa",
+            "target": "bbbb",
+            "original": ["a", "c"],
+            "changed": ["c", "b"],
+            "cost": [1, 2],
         },
         "output": 12,
     },
     {
         "input": {
-            "source": "abcd", "target": "abce", "original": ["a"], "changed": ["e"], "cost": [10000]
+            "source": "abcd",
+            "target": "abce",
+            "original": ["a"],
+            "changed": ["e"],
+            "cost": [10000],
         },
         "output": -1,
     },

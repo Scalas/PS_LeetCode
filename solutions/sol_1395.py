@@ -6,7 +6,7 @@ class Solution:
     def num_teams(rating: List[int]) -> int:
         answer = 0
         n = len(rating)
-        for i in range(1, n -1):
+        for i in range(1, n - 1):
             lgc, llc = 0, 0
             for j in range(i):
                 if rating[j] > rating[i]:

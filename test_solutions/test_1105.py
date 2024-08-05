@@ -5,14 +5,13 @@ from solutions.sol_1105 import Solution
 cases = [
     {
         "input": {
-            "books": [[1, 1], [2, 3], [2, 3], [1, 1], [1, 1], [1, 1], [1, 2]], "shelfWidth": 4
+            "books": [[1, 1], [2, 3], [2, 3], [1, 1], [1, 1], [1, 1], [1, 2]],
+            "shelfWidth": 4,
         },
         "output": 6,
     },
     {
-        "input": {
-            "books": [[1, 3], [2, 4], [3, 2]], "shelfWidth": 6
-        },
+        "input": {"books": [[1, 3], [2, 4], [3, 2]], "shelfWidth": 6},
         "output": 4,
     },
 ]

@@ -3,7 +3,13 @@ from typing import List
 
 class Solution:
     @staticmethod
-    def minimum_cost(source: str, target: str, original: List[str], changed: List[str], cost: List[int]) -> int:
+    def minimum_cost(
+        source: str,
+        target: str,
+        original: List[str],
+        changed: List[str],
+        cost: List[int],
+    ) -> int:
         inf = float("inf")
         n = 26
         adj = [[inf] * n for _ in range(n)]
