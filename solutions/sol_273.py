@@ -2,15 +2,43 @@ class Solution:
     @staticmethod
     def number_to_words(num: int) -> str:
         if num == 0:
-            return 'Zero'
+            return "Zero"
 
-        one = ['', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine']
-        before_twenty = [
-            'Ten', 'Eleven', 'Twelve', 'Thirteen', 'Fourteen',
-            'Fifteen', 'Sixteen', 'Seventeen', 'Eighteen', 'Nineteen',
+        one = [
+            "",
+            "One",
+            "Two",
+            "Three",
+            "Four",
+            "Five",
+            "Six",
+            "Seven",
+            "Eight",
+            "Nine",
         ]
-        deca = ['Twenty', 'Thirty', 'Forty', 'Fifty', 'Sixty', 'Seventy', 'Eighty', 'Ninety']
-        unit = ['', 'Thousand', 'Million', 'Billion']
+        before_twenty = [
+            "Ten",
+            "Eleven",
+            "Twelve",
+            "Thirteen",
+            "Fourteen",
+            "Fifteen",
+            "Sixteen",
+            "Seventeen",
+            "Eighteen",
+            "Nineteen",
+        ]
+        deca = [
+            "Twenty",
+            "Thirty",
+            "Forty",
+            "Fifty",
+            "Sixty",
+            "Seventy",
+            "Eighty",
+            "Ninety",
+        ]
+        unit = ["", "Thousand", "Million", "Billion"]
 
         def create(d100, d10, d1, cu):
             res = []
@@ -43,7 +71,12 @@ class Solution:
             last = i
             u += 1
         if last > 0:
-            r = create(0, 0 if last == 1 else int(s[0]), int(s[0]) if last == 1 else int(s[1]), u)
+            r = create(
+                0,
+                0 if last == 1 else int(s[0]),
+                int(s[0]) if last == 1 else int(s[1]),
+                u,
+            )
             if r:
                 answer.append(r)
         return " ".join(answer[::-1]).strip()

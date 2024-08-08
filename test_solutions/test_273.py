@@ -4,21 +4,15 @@ from solutions.sol_273 import Solution
 
 cases = [
     {
-        "input": {
-            "num": 123
-        },
+        "input": {"num": 123},
         "output": "One Hundred Twenty Three",
     },
     {
-        "input": {
-            "num": 12345
-        },
+        "input": {"num": 12345},
         "output": "Twelve Thousand Three Hundred Forty Five",
     },
     {
-        "input": {
-            "num": 1234567
-        },
+        "input": {"num": 1234567},
         "output": "One Million Two Hundred Thirty Four Thousand Five Hundred Sixty Seven",
     },
 ]
