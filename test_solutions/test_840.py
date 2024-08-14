@@ -4,15 +4,11 @@ from solutions.sol_840 import Solution
 
 cases = [
     {
-        "input": {
-            "grid": [[4, 3, 8, 4], [9, 5, 1, 9], [2, 7, 6, 2]]
-        },
+        "input": {"grid": [[4, 3, 8, 4], [9, 5, 1, 9], [2, 7, 6, 2]]},
         "output": 1,
     },
     {
-        "input": {
-            "grid": [[8]]
-        },
+        "input": {"grid": [[8]]},
         "output": 0,
     },
 ]
