@@ -1,9 +1,12 @@
 Example 1:
 
-Input: arrays = [[1,2,3],[4,5],[1,2,3]]
-Output: 4
-Explanation: One way to reach the maximum distance 4 is to pick 1 in the first or third array and pick 5 in the second array.
+Input: n = 3
+Output: 3
+Explanation: Initially, we have one character 'A'.
+In step 1, we use Copy All operation.
+In step 2, we use Paste operation to get 'AA'.
+In step 3, we use Paste operation to get 'AAA'.
 Example 2:
 
-Input: arrays = [[1],[1]]
+Input: n = 1
 Output: 0

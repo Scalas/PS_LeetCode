@@ -22,7 +22,7 @@ cases = [
 def test_run():
     for case in cases:
         assert (
-            Solution.smallestDistancePair(
+            Solution.smallest_distance_pair(
                 nums=case["input"]["nums"],
                 k=case["input"]["k"],
             )
