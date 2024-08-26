@@ -26,6 +26,12 @@ class QuadTreeNode:
         self.bottom_right = bottom_right
 
 
+class NaryTreeNode:
+    def __init__(self, val, children: List):
+        self.val = val
+        self.children = children
+
+
 class ListNode:
     def __init__(self, x=0, next=None):
         self.val = x
