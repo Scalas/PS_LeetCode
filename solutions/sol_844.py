@@ -8,7 +8,6 @@ class Solution:
                 sq.append(c)
             elif sq:
                 sq.pop()
-        print(sq)
 
         for c in t:
             if c != "#":

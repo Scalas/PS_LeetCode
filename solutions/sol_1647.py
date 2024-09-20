@@ -7,7 +7,6 @@ class Solution:
 
         count = [i for i in count if i]
         count.sort(reverse=True)
-        print(count)
         answer = 0
         pre = 10**9
         for i in range(len(count)):

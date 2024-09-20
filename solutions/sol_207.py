@@ -11,7 +11,6 @@ class Solution:
             degree[u] += 1
 
         q = [i for i in range(num_courses) if not degree[i]]
-        print(degree)
         while q:
             nq = []
             for cur in q:

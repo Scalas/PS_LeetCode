@@ -22,7 +22,6 @@ cases = [
 @pytest.mark.sol207
 def test_run():
     for case in cases:
-        print(case)
         assert (
             Solution.can_finish(
                 num_courses=case["input"]["num_courses"],
