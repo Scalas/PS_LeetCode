@@ -18,4 +18,3 @@ def test_run():
         for u, v in case["input"]["book"]:
             res.append(cal.book(u, v))
         assert res == case["output"]
-
