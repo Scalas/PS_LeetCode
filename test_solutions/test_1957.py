@@ -4,21 +4,15 @@ from solutions.sol_1957 import Solution
 
 cases = [
     {
-        "input": {
-            "s": "leeetcode"
-        },
+        "input": {"s": "leeetcode"},
         "output": "leetcode",
     },
     {
-        "input": {
-            "s": "aaabaaaa"
-        },
+        "input": {"s": "aaabaaaa"},
         "output": "aabaa",
     },
     {
-        "input": {
-            "s": "aab"
-        },
+        "input": {"s": "aab"},
         "output": "aab",
     },
 ]
