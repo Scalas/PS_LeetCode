@@ -5,7 +5,7 @@ class Solution:
     @staticmethod
     def take_characters(s: str, k: int) -> int:
         n = len(s)
-        characters: List[int] = list(map(lambda x: ord(x) - ord('a'), list(s)))
+        characters: List[int] = list(map(lambda x: ord(x) - ord("a"), list(s)))
         total_count = [0] * 3
         for character in characters:
             total_count[character] += 1
@@ -15,7 +15,7 @@ class Solution:
         def check(window):
             nonlocal n, k, s
             count = [0] * 3
-            for c in characters[n - window:]:
+            for c in characters[n - window :]:
                 count[c] += 1
             if min(count) >= k:
                 return True

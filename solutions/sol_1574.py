@@ -26,4 +26,3 @@ class Solution:
             r = len(right) - bisect_left(right, left[i])
             answer = min(answer, n - (l + r))
         return answer
-

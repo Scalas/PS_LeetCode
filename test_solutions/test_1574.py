@@ -4,21 +4,15 @@ from solutions.sol_1574 import Solution
 
 cases = [
     {
-        "input": {
-            "arr": [1, 2, 3, 10, 4, 2, 3, 5]
-        },
+        "input": {"arr": [1, 2, 3, 10, 4, 2, 3, 5]},
         "output": 3,
     },
     {
-        "input": {
-            "arr": [5, 4, 3, 2, 1]
-        },
+        "input": {"arr": [5, 4, 3, 2, 1]},
         "output": 4,
     },
     {
-        "input": {
-            "arr": [1, 2, 3]
-        },
+        "input": {"arr": [1, 2, 3]},
         "output": 0,
     },
 ]
