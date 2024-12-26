@@ -4,15 +4,11 @@ from solutions.sol_494 import Solution
 
 cases = [
     {
-        "input": {
-            "nums": [1, 1, 1, 1, 1], "target": 3
-        },
+        "input": {"nums": [1, 1, 1, 1, 1], "target": 3},
         "output": 5,
     },
     {
-        "input": {
-            "nums": [1], "target": 1
-        },
+        "input": {"nums": [1], "target": 1},
         "output": 1,
     },
 ]
