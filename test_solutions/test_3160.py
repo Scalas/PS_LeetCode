@@ -18,8 +18,8 @@ cases = [
 def test_run():
     for case in cases:
         assert (
-            Solution.queryResults(
-                limit=case["input"]["limit"],
+            Solution.query_results(
+                _limit=case["input"]["limit"],
                 queries=case["input"]["queries"],
             )
             == case["output"]

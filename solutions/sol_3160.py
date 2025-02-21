@@ -20,5 +20,4 @@ class Solution:
                 cc += 1
             count[v] += 1
             answer.append(cc)
-        print(color)
         return answer
