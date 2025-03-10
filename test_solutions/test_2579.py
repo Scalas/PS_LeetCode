@@ -4,15 +4,11 @@ from solutions.sol_2579 import Solution
 
 cases = [
     {
-        "input": {
-            "n": 1
-        },
+        "input": {"n": 1},
         "output": 1,
     },
     {
-        "input": {
-            "n": 2
-        },
+        "input": {"n": 2},
         "output": 5,
     },
 ]
